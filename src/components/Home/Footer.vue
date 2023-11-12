@@ -1,5 +1,5 @@
 <template>
-  <div class="footer padbig">
+  <div class="footer">
     <div v-if="locale === 'ja'">
       <div class="grid2 gap">
         <div>主催</div>
@@ -44,10 +44,6 @@ const locale = computed(() => i18n.locale.value)
 </script>
 
 <style lang="scss" scoped>
-.footer {
-  background: var(--text);
-  color: var(--bg);
-}
 .grid2 {
   grid-template-columns: 100px 1fr;
 }

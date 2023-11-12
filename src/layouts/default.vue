@@ -2,7 +2,7 @@
   <div class="bg"></div>
   <div class="relative">
     <LanguagePicker />
-    <SoundPlayer />
+    <!-- <SoundPlayer /> -->
     <slot />
   </div>
 </template>

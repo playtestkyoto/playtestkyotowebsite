@@ -1,18 +1,30 @@
 <template>
-  <div>
+  <div class="relative">
+    <img class="doodle" src="/images/home/doodle1.svg" />
     <div v-if="locale === 'ja'">
-      <h3>
-        Playtest Kyoto
-        は、都市空間を舞台としたゲームや遊びを行う3日間のイベントです。
-      </h3>
+      <h2>
+        <span class="hl1">Playtest Kyoto</span>は、<span
+          class="hl2"
+          >都市空間</span
+        >を舞台とした<span class="hl3">ゲーム</span>や<span
+          class="hl3"
+          >遊び</span
+        >を行う<span class="hl4">3日間のイベント</span
+        >です。
+      </h2>
 
-      京都に縁のあるゲームデザイナー、クリエイター、アーティストと共に、京都市内の広場や公園などの公共空間や、文化創造拠点や未活用の遊休不動産などを舞台に、子供から高齢者まで誰でも参加可能なゲームを制作します。街区全体を活用したトレジャーハンティングや、チームに分かれてミッションをクリアしていくストリート版借り物競争、アプリを活用した街中でのAR体験など、デジタルからフィジカルまでを横断しながら、京都という街を捉え直し、遊び尽くす3日間です。
+      京都に縁のあるゲームデザイナー、クリエイター、アーティストと共に、京都市内の広場や公園
+      などの公共空間や、文化創造拠点や未活用の遊休不動産などを舞台に、子供から高齢者まで誰でも参加可能なゲームを制作します。街区全体を活用したトレジャーハンティングや、チームに分かれてミッションをクリアしていくストリート版借り物競争、アプリを活用した街中でのAR体験など、デジタルからフィジカルまでを横断しながら、京都という街を捉え直し、遊び尽くす3日間です。
     </div>
     <div v-else>
-      <h3>
-        Urban Playtest Kyoto is a three-day event for games
-        and play in urban spaces.
-      </h3>
+      <h2>
+        <span class="hl1">Playtest Kyoto</span> is a
+        <span class="hl2">three-day</span>&nbsp;
+        <span class="hl2">event</span> for
+        <span class="hl3">games</span> and
+        <span class="hl3">play</span> in
+        <span class="hl4">urban spaces</span>.
+      </h2>
 
       Together with game designers, creators, and artists
       with ties to Kyoto, we will create games that anyone
@@ -36,4 +48,11 @@ const i18n = useI18n()
 const locale = computed(() => i18n.locale.value)
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.doodle {
+  position: absolute;
+  top: 2em;
+  right: calc(100% + 2em);
+  width: 70px;
+}
+</style>

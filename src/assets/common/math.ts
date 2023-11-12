@@ -358,3 +358,18 @@ export function lineIntersectsOtherLine(
     denominator
   return ua >= 0 && ua <= 1 && ub >= 0 && ub <= 1
 }
+
+export function rotatePoint(
+  point: [number, number],
+  rotateAround: [number, number],
+  angle: number,
+): [number, number] {
+  const [x, y] = point
+  const [cx, cy] = rotateAround
+  const radians = (Math.PI / 180) * angle
+  const cos = Math.cos(radians)
+  const sin = Math.sin(radians)
+  const nx = cos * (x - cx) + sin * (y - cy) + cx
+  const ny = cos * (y - cy) - sin * (x - cx) + cy
+  return [nx, ny]
+}

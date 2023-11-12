@@ -1,8 +1,15 @@
 <template>
-  <div class="heroContainer" ref="container">
+  <div
+    class="heroContainer"
+    ref="container"
+    @click="recalcD"
+    :style="{ '--highlight': currentHighlight }"
+    :key="id"
+  >
     <svg
       :style="{
         '--illustrationWidth': `${width}px`,
+        '--illustrationHeight': `${height}px`,
       }"
       class="absolute"
       :width="width"
@@ -11,7 +18,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <mask id="negativeMask">
+      <mask :id="'negativeMask' + id">
         <!-- Everything under a white pixel will be visible -->
         <rect
           :width="width"
@@ -20,11 +27,11 @@
         />
         <path :d="d" fill="black" />
       </mask>
-      <mask id="positiveMask">
+      <mask :id="'positiveMask' + id">
         <path :d="d" fill="white" />
       </mask>
 
-      <!-- <g mask="url(#negativeMask)">
+      <!-- <g :mask="`url(#negativeMask${id})`">
       <rect
         :width="width"
         :height="height"
@@ -32,7 +39,7 @@
       />
     </g>
 
-    <g mask="url(#positiveMask)">
+    <g :mask="`url(#positiveMask${id})`">
       <rect
         :width="width"
         :height="height"
@@ -41,38 +48,77 @@
     </g> -->
 
       <defs>
-        <path id="textPath" :d="offsetD" />
+        <path :id="'textPath' + id" :d="d" />
       </defs>
+
+      <image
+        class="fadeImage"
+        :x="0"
+        :y="0"
+        :width="width"
+        :height="height"
+        :style="imageStyleOverride"
+        :xlink:href="currentImagePath"
+      />
 
       <path
         :d="d"
-        stroke="var(--text)"
-        :stroke-width="2 * (height / 500)"
-        stroke-dasharray="10 20"
+        class="dashedLine"
+        :stroke-width="10 * (height / 500)"
+        :stroke-dasharray="`${30 * (height / 500)} ${
+          30 * (height / 500)
+        }`"
         :stroke-dashoffset="dashOffset"
       />
 
-      <text dominant-baseline="top">
-        <textPath
-          xlink:href="#textPath"
-          :startOffset="startOffset"
-        >
-          <template v-if="iterationCount % 40 === 39">
-            4202 otoyk tsetyalp
-          </template>
-          <template v-else>playtest kyoto 2024</template>
-        </textPath>
-      </text>
-
-      <g mask="url(#positiveMask)">
-        <text
+      <g :mask="`url(#positiveMask${id})`">
+        <image
+          class="bgImage"
+          :x="0"
+          :y="0"
+          :width="width"
+          :height="height"
+          :style="imageStyleOverride"
+          :xlink:href="currentImagePath"
+        />
+        <rect
+          :width="width"
+          :height="height"
+          class="imageOverlay"
+        />
+        <!-- <text
           class="inProgress"
           :x="width / 2"
           :y="height / 2"
         >
           工事中
-        </text>
+        </text> -->
       </g>
+
+      <path
+        :d="d"
+        class="thickLine"
+        :stroke-width="50 * (height / 500)"
+        :stroke-dasharray="`${
+          (text?.length || 0) *
+          ((width + height) / 2) *
+          0.056 *
+          thickLineLengthMultiplier
+        } 9999999`"
+        :stroke-dashoffset="-startOffset + width * 0.015"
+      />
+
+      <text dominant-baseline="middle">
+        <textPath
+          :xlink:href="`#textPath${id}`"
+          :startOffset="startOffset"
+        >
+          <template v-if="iterationCount % 40 === 39">
+            {{ text?.split('').reverse().join('') }}
+          </template>
+          <template v-else>{{ text }}</template>
+        </textPath>
+      </text>
     </svg>
   </div>
 </template>
@@ -80,6 +126,34 @@
 <script setup lang="ts">
 import * as c from '~/assets/common'
 import * as appState from '~/assets/state'
+
+const {
+  text,
+  images,
+  highlight,
+  changeEvery,
+  thickLineLengthMultiplier,
+} = defineProps({
+  text: String,
+  images: {
+    type: Object as PropType<string[]>,
+    default: [],
+  },
+  highlight: {
+    type: Object as PropType<string[]>,
+    default: [],
+  },
+  changeEvery: {
+    type: Number,
+    default: 0,
+  },
+  thickLineLengthMultiplier: {
+    type: Number,
+    default: 1,
+  },
+})
+
+const id = c.id()
 
 const d: Ref<string> = ref('')
 const offsetD: Ref<string> = ref('')
@@ -90,45 +164,87 @@ const height = ref(500)
 const width = ref(500)
 const startOffset = ref(0)
 const iterationCount = ref(0)
+const currentImagePath = ref(images[0])
+const imageStyleOverride = ref('')
+const currentHighlight = ref('')
 
 onMounted(() => {
-  height.value = container.value?.clientHeight ?? 500
-  width.value = container.value?.clientWidth ?? 500
   recalcD()
 })
 
 setInterval(() => {
-  dashOffset.value -= 0.5
+  dashOffset.value -= 0.8
 }, 10)
-setInterval(recalcD, 2000)
+
+if (changeEvery > 0) setInterval(recalcD, changeEvery)
 
 function recalcD() {
+  height.value = container.value?.clientHeight ?? 500
+  width.value = container.value?.clientWidth ?? 500
   iterationCount.value++
 
-  const topBuffer = 30
-  const buffer = 10
+  const topBuffer = height.value * 0.4
+  const buffer = width.value * 0.15
   const minX = buffer,
     minY = topBuffer,
     maxX = width.value - buffer,
-    maxY = height.value - buffer
+    maxY = height.value - buffer,
+    centerOffset = Math.min(width.value, height.value) * 0.2
 
   const points: [number, number][] = []
+  // top left
   points.push([
-    c.randomIntBetweenInclusive(minX, maxX / 2),
-    c.randomIntBetweenInclusive(minY, maxY / 2),
+    c.randomIntBetweenInclusive(
+      minX,
+      maxX / 2 - centerOffset,
+    ),
+    c.randomIntBetweenInclusive(
+      minY,
+      maxY / 2 - centerOffset,
+    ),
   ])
+  // top right
   points.push([
-    c.randomIntBetweenInclusive(maxX / 2, maxX),
-    c.randomIntBetweenInclusive(minY, maxY / 2),
+    c.randomIntBetweenInclusive(
+      maxX / 2 + centerOffset,
+      maxX,
+    ),
+    c.randomIntBetweenInclusive(
+      minY,
+      maxY / 2 - centerOffset,
+    ),
   ])
+  // bottom right
   points.push([
-    c.randomIntBetweenInclusive(maxX / 2, maxX),
-    c.randomIntBetweenInclusive(maxY / 2, maxY),
+    c.randomIntBetweenInclusive(
+      maxX / 2 + centerOffset,
+      maxX,
+    ),
+    c.randomIntBetweenInclusive(
+      maxY / 2 + centerOffset,
+      maxY,
+    ),
   ])
+  // bottom left
   points.push([
-    c.randomIntBetweenInclusive(minX, maxX / 2),
-    c.randomIntBetweenInclusive(maxY / 2, maxY),
+    c.randomIntBetweenInclusive(
+      minX,
+      maxX / 2 - centerOffset,
+    ),
+    c.randomIntBetweenInclusive(
+      maxY / 2 + centerOffset,
+      maxY,
+    ),
   ])
+  const rotateAngle = c.randomIntBetweenInclusive(-25, 25)
+  points.forEach(([x, y], i) => {
+    const [x2, y2] = c.rotatePoint(
+      [x, y],
+      [width.value / 2, height.value / 2],
+      rotateAngle,
+    )
+    points[i] = [x2, y2]
+  })
 
   d.value =
     `M ${points[0][0]} ${points[0][1]} ` +
@@ -161,10 +277,36 @@ function recalcD() {
     0,
     width.value * 0.1,
   )
+
+  const prevImage = currentImagePath.value
+  currentImagePath.value = c.randomFromArray(images)
+  if (images.length > 1) {
+    while (currentImagePath.value === prevImage) {
+      currentImagePath.value = c.randomFromArray(images)
+    }
+  }
+  imageStyleOverride.value = `transform: rotate(${c.randomBetween(
+    -10,
+    10,
+  )}deg) scale(${c.randomBetween(1, 1.1)})`
+
+  const prevHighlight = currentHighlight.value
+  currentHighlight.value = c.randomFromArray(highlight)
+  if (highlight.length > 1) {
+    while (currentHighlight.value === prevImage) {
+      currentHighlight.value = c.randomFromArray(highlight)
+    }
+  }
 }
 
 onMounted(() => {
   window.addEventListener('keydown', keyListener)
+
+  // preload all images
+  images.forEach((src) => {
+    const img = new Image()
+    img.src = src
+  })
 })
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', keyListener)
@@ -181,12 +323,38 @@ function keyListener(e: KeyboardEvent) {
 }
 text {
   fill: var(--text);
-  font-size: calc(var(--illustrationWidth) * 0.05);
+  font-size: calc(
+    (var(--illustrationWidth) + var(--illustrationHeight)) /
+      2 * 0.1
+  );
   font-family: var(--fontStack);
+  stroke: var(--text);
+  stroke-width: calc(var(--illustrationHeight) * 0.004);
 
   // transform: translateY(
   //   calc(var(--illustrationWidth) * -0.05)
   // );
+}
+
+.dashedLine,
+.thickLine {
+  stroke: var(--highlight, var(--text));
+}
+
+.bgImage,
+.fadeImage {
+  transform-origin: center;
+}
+.fadeImage {
+  display: none;
+  filter: saturate(0) blur(2px);
+  opacity: 0.4;
+}
+
+.imageOverlay {
+  fill: var(--highlight, white);
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
 }
 
 .inProgress {
