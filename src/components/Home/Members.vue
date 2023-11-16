@@ -1,19 +1,34 @@
 <template>
   <div>
-    <h2>
+    <h2 class="marbot">
       <span v-if="locale === 'ja'">チームメンバー</span>
       <span v-else>Team</span>
     </h2>
 
     <div class="members">
-      <div class="member">
+      <div
+        class="member"
+        :style="{
+          transform: `rotate(${c.randomIntBetweenInclusive(
+            -15,
+            15,
+          )}deg) translateX(${c.randomIntBetweenInclusive(
+            -20,
+            20,
+          )}px) translateY(${c.randomIntBetweenInclusive(
+            -50,
+            50,
+          )}px)`,
+        }"
+      >
         <HeroTest1
           class="personImage"
           :text="
             locale === 'ja' ? '杉田真理子' : 'Mariko Sugita'
           "
           :images="['/images/hero/1.jpg']"
-          :highlight="['white']"
+          :highlight="['#666']"
+          textColor="white"
           :thickLineLengthMultiplier="
             locale === 'ja' ? 1.9 : 1
           "
@@ -27,7 +42,7 @@
           >
           <span v-else class="sub">Director</span>
         </div>
-        <div>
+        <div class="body">
           <template v-if="locale === 'ja'">
             「都市体験の編集」をテーマに、場のデザインプロジェクトを、渋谷、池袋、神戸、アムステルダム、ナイロビ、カイロ、ホーチミンなど複数都市で手がける。都市・建築・まちづくり分野における執筆や編集、リサーチほか文化芸術分野でのキュレーションや新規プログラムのプロデュース、ディレクション、ファシリテーションなど国内外を横断しながら活動を行う。1年の半分は海外のさまざまな都市に滞在している。
           </template>
@@ -35,7 +50,21 @@
         </div>
       </div>
 
-      <div class="member">
+      <div
+        class="member"
+        :style="{
+          transform: `rotate(${c.randomIntBetweenInclusive(
+            -15,
+            15,
+          )}deg) translateX(${c.randomIntBetweenInclusive(
+            -20,
+            20,
+          )}px) translateY(${c.randomIntBetweenInclusive(
+            -50,
+            50,
+          )}px)`,
+        }"
+      >
         <HeroTest1
           class="personImage"
           :text="
@@ -44,7 +73,8 @@
               : 'William Zack Wood'
           "
           :images="['/images/hero/2.jpg']"
-          :highlight="['white']"
+          :highlight="['#666']"
+          textColor="white"
           :thickLineLengthMultiplier="0.95"
         />
 
@@ -58,7 +88,7 @@
           >
           <span v-else class="sub">Advisor</span>
         </div>
-        <div>
+        <div class="body">
           <template v-if="locale === 'ja'">
             京都精華大学芸術研究科博士後期課程。2014年からヨーロッパにて、ゲームデザイン・シアターゲーム指導・パフォーマンスを行う。その後、自作のゲームやマンガのキャラクターを元に、2020年からオリジナルのオラクルカードを作っている。
           </template>
@@ -77,7 +107,21 @@
         </div>
       </div>
 
-      <div class="member">
+      <div
+        class="member"
+        :style="{
+          transform: `rotate(${c.randomIntBetweenInclusive(
+            -15,
+            15,
+          )}deg) translateX(${c.randomIntBetweenInclusive(
+            -20,
+            20,
+          )}px) translateY(${c.randomIntBetweenInclusive(
+            -50,
+            50,
+          )}px)`,
+        }"
+      >
         <HeroTest1
           class="personImage"
           :text="
@@ -86,7 +130,8 @@
               : 'Jasper Stephenson'
           "
           :images="['/images/hero/3.jpg']"
-          :highlight="['white']"
+          :highlight="['#666']"
+          textColor="white"
           :thickLineLengthMultiplier="0.95"
         />
 
@@ -100,7 +145,7 @@
           >
           <span v-else class="sub">Generalist</span>
         </div>
-        <div>
+        <div class="body">
           <template v-if="locale === 'ja'">
             京都左京区にベースされたクリエーターです。チームの総合者として必要に応じて開発やビジュアルデザインやUXやゲームデザインを行います。最近開発したゲームはコラボ形の展示会の<a
               href="https://www.differentstrokes.xyz"
@@ -125,14 +170,29 @@
         </div>
       </div>
 
-      <div class="member">
+      <div
+        class="member"
+        :style="{
+          transform: `rotate(${c.randomIntBetweenInclusive(
+            -15,
+            15,
+          )}deg) translateX(${c.randomIntBetweenInclusive(
+            -20,
+            20,
+          )}px) translateY(${c.randomIntBetweenInclusive(
+            -50,
+            50,
+          )}px)`,
+        }"
+      >
         <HeroTest1
           class="personImage"
           :text="
             locale === 'ja' ? '坂東拓海' : 'Takumi Bando'
           "
           :images="['/images/hero/4.jpg']"
-          :highlight="['white']"
+          :highlight="['#666']"
+          textColor="white"
           :thickLineLengthMultiplier="
             locale === 'ja' ? 1.9 : 1
           "
@@ -158,12 +218,27 @@
         </div>
       </div>
 
-      <div class="member">
+      <div
+        class="member"
+        :style="{
+          transform: `rotate(${c.randomIntBetweenInclusive(
+            -15,
+            15,
+          )}deg) translateX(${c.randomIntBetweenInclusive(
+            -20,
+            20,
+          )}px) translateY(${c.randomIntBetweenInclusive(
+            -50,
+            50,
+          )}px)`,
+        }"
+      >
         <HeroTest1
           class="personImage"
           :text="locale === 'ja' ? '貞雄大' : 'Yudai Sada'"
           :images="['/images/hero/1.jpg']"
-          :highlight="['white']"
+          :highlight="['#666']"
+          textColor="white"
           :thickLineLengthMultiplier="
             locale === 'ja' ? 1.9 : 1
           "
@@ -201,17 +276,20 @@ const locale = computed(() => i18n.locale.value)
 .members {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 3em 2em;
+  grid-gap: 5em 5em;
 
   .personImage {
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 15em;
     transform: scale(1.4);
+    margin-bottom: -3em;
   }
   .nameAndTitle {
     position: relative;
-    z-index: 2;
-    margin-bottom: 1em;
+    z-index: 3;
+    // margin-bottom: 1em;
 
     *:first-child {
       font-size: 1.3em;
@@ -220,6 +298,11 @@ const locale = computed(() => i18n.locale.value)
     .sub {
       margin-left: 1em;
     }
+  }
+
+  .body {
+    position: relative;
+    z-index: 3;
   }
 }
 </style>

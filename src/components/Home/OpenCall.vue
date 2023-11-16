@@ -32,6 +32,13 @@
       games.
     </template>
 
+    <video autoplay loop muted playsinline>
+      <source
+        src="/images/home/game.mp4"
+        type="video/mp4"
+      />
+    </video>
+
     <template v-if="locale === 'ja'">
       <h5>募集概要</h5>
       <ul>
@@ -141,6 +148,20 @@
         get in touch with us for more information.
       </div>
     </template>
+
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="martop"
+      style="height: 200px"
+    >
+      <source
+        src="/images/home/help.mp4"
+        type="video/mp4"
+      />
+    </video>
 
     <hr />
 

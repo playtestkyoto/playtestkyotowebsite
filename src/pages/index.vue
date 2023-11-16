@@ -52,15 +52,17 @@
         </Vogue>
       </div>
     </div>
-    <div class="bg3">
-      <div class="contentcolumn padtopbig padbotbig">
+    <div class="textcolumn martopbig padbotbig">
+      <HomeOpenCall />
+    </div>
+    <div class="bg1">
+      <div
+        class="contentcolumn padtopbig padbotbig marbotbig"
+      >
         <HomeMembers />
       </div>
     </div>
-    <div class="textcolumn martopbig">
-      <HomeOpenCall />
-    </div>
-    <div class="bg1 martopbig">
+    <div class="bg1">
       <div class="contentcolumn padtopbig padbotbig">
         <HomeFooter />
       </div>

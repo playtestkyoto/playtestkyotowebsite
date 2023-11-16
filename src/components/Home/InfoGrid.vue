@@ -81,6 +81,7 @@ const locale = computed(() => i18n.locale.value)
   font-size: 1.5em;
   border: var(--border);
   border-bottom: none;
+  max-width: 1200px;
 }
 .row {
   display: grid;

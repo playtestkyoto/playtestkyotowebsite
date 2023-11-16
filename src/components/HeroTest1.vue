@@ -108,7 +108,13 @@
         :stroke-dashoffset="-startOffset + width * 0.015"
       />
 
-      <text dominant-baseline="middle">
+      <text
+        dominant-baseline="middle"
+        :style="{
+          fill: textColor,
+          stroke: textColor,
+        }"
+      >
         <textPath
           :xlink:href="`#textPath${id}`"
           :startOffset="startOffset"
@@ -133,6 +139,7 @@ const {
   highlight,
   changeEvery,
   thickLineLengthMultiplier,
+  textColor,
 } = defineProps({
   text: String,
   images: {
@@ -150,6 +157,10 @@ const {
   thickLineLengthMultiplier: {
     type: Number,
     default: 1,
+  },
+  textColor: {
+    type: String,
+    default: 'var(--text)',
   },
 })
 
@@ -322,7 +333,6 @@ function keyListener(e: KeyboardEvent) {
   height: 300px;
 }
 text {
-  fill: var(--text);
   font-size: calc(
     (var(--illustrationWidth) + var(--illustrationHeight)) /
       2 * 0.1
