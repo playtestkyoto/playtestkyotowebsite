@@ -8,7 +8,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "golive": "git push && ssh root@p.jasperstephenson.com 'source ~/.profile && cd ~/playtestkyotowebsite && git pull && nvm use 18 && npm run build && /root/.nvm/versions/node/v16.17.1/bin/pm2 restart playtest.city && /root/.nvm/versions/node/v16.17.1/bin/pm2 logs'"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",

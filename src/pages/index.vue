@@ -24,7 +24,10 @@
         <span v-if="locale === 'ja'">
           都市空間における”遊び”のフェスティバル
         </span>
-        <span v-else></span> 👉&nbsp;
+        <span v-else
+          >A Playground for Experimental Urban Games</span
+        >
+        👉&nbsp;
       </h3>
     </Marquee>
     <div class="contentcolumn martopbig padtopbig">
@@ -39,8 +42,8 @@
       </div>
     </div>
 
-    <div class="bg2">
-      <div class="flexcenter padtopbig padbotbig">
+    <div class="bg2 nooverflow">
+      <div class="flexcenter padtop padbot">
         <Vogue>
           <Marquee>
             <h1
@@ -52,14 +55,31 @@
         </Vogue>
       </div>
     </div>
-    <div class="textcolumn martopbig padbotbig">
-      <HomeOpenCall />
+    <div class="relative padtopbig padbotbig">
+      <BoxInText class="bold caps">
+        <span style="color: var(--color1x)"
+          >Playtest Kyoto 2024 ・ OPEN CALL受付中 ・</span
+        >
+        <span style="color: var(--color2x)"
+          >Playtest Kyoto 2024 ・ OPEN CALL受付中 ・</span
+        >
+        <span style="color: var(--color3x)"
+          >Playtest Kyoto 2024 ・ OPEN CALL受付中 ・</span
+        >
+        <span style="color: var(--color4x)"
+          >Playtest Kyoto 2024 ・ OPEN CALL受付中 ・</span
+        >
+      </BoxInText>
+
+      <div class="textcolumn martopbig marbotbig">
+        <HomeOpenCall />
+      </div>
     </div>
     <div class="bg1">
       <div
         class="contentcolumn padtopbig padbotbig marbotbig"
       >
-        <HomeMembers />
+        <HomeMembers class="padbotbig" />
       </div>
     </div>
     <div class="bg1">
@@ -88,7 +108,7 @@ const locale = computed(() => i18n.locale.value)
   position: relative;
   z-index: 0;
   width: 100%;
-  height: calc(min(70vh, 900px, 90vw));
+  height: calc(min(90vh, 1000px, 90vw));
   margin-bottom: calc(-1 * (min(200px, 20vw)));
 }
 

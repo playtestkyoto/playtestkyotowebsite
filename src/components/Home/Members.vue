@@ -23,11 +23,14 @@
       >
         <HeroTest1
           class="personImage"
+          :changeEvery="
+            c.randomIntBetweenInclusive(5000, 8000)
+          "
           :text="
             locale === 'ja' ? '杉田真理子' : 'Mariko Sugita'
           "
-          :images="['/images/hero/1.jpg']"
-          :highlight="['#666']"
+          :images="['/images/people/mariko.jpg']"
+          :highlight="['var(--color1D)']"
           textColor="white"
           :thickLineLengthMultiplier="
             locale === 'ja' ? 1.9 : 1
@@ -37,10 +40,10 @@
         <div class="nameAndTitle">
           <span v-if="locale === 'ja'">杉田真理子</span>
           <span v-else>Mariko Sugita</span>
-          <span v-if="locale === 'ja'" class="sub"
+          <span v-if="locale === 'ja'" class="small"
             >ディレクター</span
           >
-          <span v-else class="sub">Director</span>
+          <span v-else class="small">Director</span>
         </div>
         <div class="body">
           <template v-if="locale === 'ja'">
@@ -67,13 +70,16 @@
       >
         <HeroTest1
           class="personImage"
+          :changeEvery="
+            c.randomIntBetweenInclusive(5000, 8000)
+          "
           :text="
             locale === 'ja'
               ? 'William Zack Wood'
               : 'William Zack Wood'
           "
-          :images="['/images/hero/2.jpg']"
-          :highlight="['#666']"
+          :images="['/images/people/zack.jpg']"
+          :highlight="['var(--color2D)']"
           textColor="white"
           :thickLineLengthMultiplier="0.95"
         />
@@ -83,10 +89,10 @@
             >William Zack Wood</span
           >
           <span v-else>William Zack Wood</span>
-          <span v-if="locale === 'ja'" class="sub"
+          <span v-if="locale === 'ja'" class="small"
             >アドバイザー</span
           >
-          <span v-else class="sub">Advisor</span>
+          <span v-else class="small">Advisor</span>
         </div>
         <div class="body">
           <template v-if="locale === 'ja'">
@@ -124,15 +130,18 @@
       >
         <HeroTest1
           class="personImage"
+          :changeEvery="
+            c.randomIntBetweenInclusive(5000, 8000)
+          "
           :text="
             locale === 'ja'
               ? 'Jasper Stephenson'
               : 'Jasper Stephenson'
           "
-          :images="['/images/hero/3.jpg']"
-          :highlight="['#666']"
+          :images="['/images/people/jasper.jpg']"
+          :highlight="['var(--color3D)']"
           textColor="white"
-          :thickLineLengthMultiplier="0.95"
+          :thickLineLengthMultiplier="0.97"
         />
 
         <div class="nameAndTitle">
@@ -140,10 +149,10 @@
             >Jasper Stephenson</span
           >
           <span v-else>Jasper Stephenson</span>
-          <span v-if="locale === 'ja'" class="sub"
+          <span v-if="locale === 'ja'" class="small"
             >総合者</span
           >
-          <span v-else class="sub">Generalist</span>
+          <span v-else class="small">Generalist</span>
         </div>
         <div class="body">
           <template v-if="locale === 'ja'">
@@ -187,11 +196,14 @@
       >
         <HeroTest1
           class="personImage"
+          :changeEvery="
+            c.randomIntBetweenInclusive(5000, 8000)
+          "
           :text="
             locale === 'ja' ? '坂東拓海' : 'Takumi Bando'
           "
           :images="['/images/hero/4.jpg']"
-          :highlight="['#666']"
+          :highlight="['var(--color4D)']"
           textColor="white"
           :thickLineLengthMultiplier="
             locale === 'ja' ? 1.9 : 1
@@ -201,12 +213,12 @@
         <div class="nameAndTitle">
           <span v-if="locale === 'ja'">坂東 拓海</span>
           <span v-else>Takumi Bando</span>
-          <span v-if="locale === 'ja'" class="sub"
+          <span v-if="locale === 'ja'" class="small"
             >デザイナー</span
           >
-          <span v-else class="sub">Designer</span>
+          <span v-else class="small">Designer</span>
         </div>
-        <div>
+        <div class="body">
           <template v-if="locale === 'ja'"
             >1999年札幌生まれ。2022年、クリエイティブ・ユニット****/commentsに加入。2023年、京都芸術大学情報デザイン学科クロステックデザインコース卒業。Daisuke
             Hasegawa Studioに加入。<br />
@@ -235,24 +247,27 @@
       >
         <HeroTest1
           class="personImage"
+          :changeEvery="
+            c.randomIntBetweenInclusive(5000, 8000)
+          "
           :text="locale === 'ja' ? '貞雄大' : 'Yudai Sada'"
           :images="['/images/hero/1.jpg']"
-          :highlight="['#666']"
+          :highlight="['var(--color1D)']"
           textColor="white"
           :thickLineLengthMultiplier="
-            locale === 'ja' ? 1.9 : 1
+            locale === 'ja' ? 2 : 1
           "
         />
 
         <div class="nameAndTitle">
           <span v-if="locale === 'ja'">貞 雄大</span>
           <span v-else>Yudai Sada</span>
-          <span v-if="locale === 'ja'" class="sub"
+          <span v-if="locale === 'ja'" class="small"
             >デザイナー</span
           >
-          <span v-else class="sub">Designer</span>
+          <span v-else class="small">Designer</span>
         </div>
-        <div>
+        <div class="body">
           <template v-if="locale === 'ja'"
             >1998年大阪府生まれ。2018年、スイスZürcher
             Hochschule der
@@ -282,20 +297,21 @@ const locale = computed(() => i18n.locale.value)
     position: relative;
     z-index: 2;
     width: 100%;
-    height: 15em;
+    height: 20em;
     transform: scale(1.4);
     margin-bottom: -3em;
   }
   .nameAndTitle {
     position: relative;
     z-index: 3;
-    // margin-bottom: 1em;
+    margin-bottom: 0.3em;
+    text-shadow: 0 0 0.2em var(--text);
 
     *:first-child {
       font-size: 1.3em;
       font-weight: bold;
     }
-    .sub {
+    .small {
       margin-left: 1em;
     }
   }
@@ -303,6 +319,7 @@ const locale = computed(() => i18n.locale.value)
   .body {
     position: relative;
     z-index: 3;
+    text-shadow: 0 0 0.2em var(--text);
   }
 }
 </style>

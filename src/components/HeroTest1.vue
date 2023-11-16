@@ -194,13 +194,14 @@ function recalcD() {
   width.value = container.value?.clientWidth ?? 500
   iterationCount.value++
 
-  const topBuffer = height.value * 0.4
-  const buffer = width.value * 0.15
+  const topBuffer =
+    Math.min(width.value, height.value) * 0.4
+  const buffer = Math.min(width.value, height.value) * 0.2
   const minX = buffer,
     minY = topBuffer,
     maxX = width.value - buffer,
     maxY = height.value - buffer,
-    centerOffset = Math.min(width.value, height.value) * 0.2
+    centerOffset = Math.min(width.value, height.value) * 0.3
 
   const points: [number, number][] = []
   // top left
@@ -331,6 +332,7 @@ function keyListener(e: KeyboardEvent) {
 .heroContainer {
   width: 700px;
   height: 300px;
+  user-select: none;
 }
 text {
   font-size: calc(
