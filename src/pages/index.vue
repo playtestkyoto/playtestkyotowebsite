@@ -30,13 +30,22 @@
         👉&nbsp;
       </h3>
     </Marquee>
-    <div class="contentcolumn martopbig padtopbig">
+    <div
+      class="contentcolumn padtop"
+      :class="{
+        martopbig: !appState.mobile.value,
+        padtopbig: !appState.mobile.value,
+      }"
+    >
       <HomeAbout />
     </div>
 
     <div class="bg1 martopbig">
       <div
-        class="padleftbig padrightbig padtopbig padbotbig martop marbot"
+        class="pad martop marbot"
+        :class="{
+          padbig: !appState.mobile.value,
+        }"
       >
         <HomeInfoGrid />
       </div>
@@ -55,8 +64,12 @@
         </Vogue>
       </div>
     </div>
-    <div class="relative padtopbig padbotbig">
-      <BoxInText class="bold caps">
+
+    <div class="relative martop padtopbig padbotbig">
+      <BoxInText
+        class="bold caps"
+        :offset="appState.mobile.value ? '.2em' : '2em'"
+      >
         <span style="color: var(--color1x)"
           >Playtest Kyoto 2024 ・ OPEN CALL受付中 ・</span
         >
@@ -71,8 +84,18 @@
         >
       </BoxInText>
 
-      <div class="textcolumn martopbig marbotbig">
-        <HomeOpenCall />
+      <div
+        class="textcolumn marbotbig"
+        :class="{
+          martopbig: !appState.mobile.value,
+        }"
+      >
+        <HomeOpenCall
+          :class="{
+            padleftsmall: appState.mobile.value,
+            padrightsmall: appState.mobile.value,
+          }"
+        />
       </div>
     </div>
     <div class="bg1">
@@ -108,23 +131,14 @@ const locale = computed(() => i18n.locale.value)
   position: relative;
   z-index: 0;
   width: 100%;
-  height: calc(min(90vh, 1000px, 90vw));
+  height: calc(min(90vh, 1000px, 70vw));
   margin-bottom: calc(-1 * (min(200px, 20vw)));
-}
 
-.contentcolumn {
-  width: 100%;
-  max-width: 1000px;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 0 auto;
-}
-.textcolumn {
-  width: 100%;
-  max-width: 700px;
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 0 auto;
+  @media (max-width: 768px) {
+    margin-top: 5em;
+    transform: scale(1.4);
+    margin-bottom: calc(-1 * (min(100px, 10vw)));
+  }
 }
 
 .bg1 {
@@ -134,6 +148,43 @@ const locale = computed(() => i18n.locale.value)
 .bg2 {
   color: var(--text);
   animation: rainbow 5s infinite alternate;
+  --size: 15px;
+  padding-top: calc(var(--size) * 2);
+  padding-bottom: calc(var(--size) * 2);
+  margin-top: calc(-1 * var(--size) * 2);
+  margin-bottom: calc(-1 * var(--size) * 2);
+  backface-visibility: hidden;
+
+  --mask: radial-gradient(
+        var(--size) at 25% 0,
+        #0000 98%,
+        #000
+      )
+      50% var(--size) / calc(var(--size) * 4) 51% repeat-x,
+    radial-gradient(
+        var(--size) at 75% 50%,
+        #000 99%,
+        #0000 101%
+      )
+      top/calc(var(--size) * 4) calc(var(--size) * 2)
+      repeat-x,
+    radial-gradient(
+        var(--size) at 75% 100%,
+        #0000 98%,
+        #000
+      )
+      calc(50% + calc(var(--size) * 2))
+      calc(100% - var(--size)) / calc(var(--size) * 4) 51%
+      repeat-x,
+    radial-gradient(
+        var(--size) at 25% 50%,
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% + calc(var(--size) * 2)) 100% /
+      calc(var(--size) * 4) calc(var(--size) * 2) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 .bg3 {

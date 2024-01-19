@@ -32,7 +32,13 @@
       games.
     </template>
 
-    <video autoplay loop muted playsinline>
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="block martop marbot"
+    >
       <source
         src="/images/home/game.mp4"
         type="video/mp4"
@@ -40,7 +46,7 @@
     </video>
 
     <template v-if="locale === 'ja'">
-      <h5>募集概要</h5>
+      <h3>募集概要</h3>
       <ul>
         <li>
           京都市内のさまざまな場所（広場などの公共空間を中心に、公共性のある施設やギャラリーなどもOK）を舞台に、具体的なゲームや遊びの提案
@@ -66,7 +72,7 @@
       </ul>
     </template>
     <template v-else>
-      <h5>Entry Format</h5>
+      <h3>Entry Format</h3>
       <ul>
         <li>
           Proposals for specific games and games to be
@@ -108,7 +114,7 @@
     <hr />
 
     <template v-if="locale === 'ja'">
-      <h5>ボランティアスタッフについて</h5>
+      <h3>ボランティアスタッフについて</h3>
       <div>
         Playtest
         Kyotoでは、ボランティアスタッフの募集をしております。
@@ -127,7 +133,7 @@
       </div>
     </template>
     <template v-else>
-      <h5>Volunteer Staff</h5>
+      <h3>Volunteer Staff</h3>
       <div>
         Playtest Kyoto is looking for volunteer staff!
       </div>
@@ -154,7 +160,7 @@
       loop
       muted
       playsinline
-      class="martop"
+      class="block martop marbot"
       style="height: 200px"
     >
       <source
@@ -166,14 +172,14 @@
     <hr />
 
     <template v-if="locale === 'ja'">
-      <h5>寄付・企業協賛のお願い</h5>
+      <h3>寄付・企業協賛のお願い</h3>
       <div>
         Playtest
         Kyotoは、最小限の予算内で、非営利かつインディペンデントな実行委員会により運営されています。そのため、寄付や企業協賛などのサポートを、随時募集しております。寄付いただいた資金は、場所レンタル料やイベント保険、クリエイターへの謝礼などに還元させて頂き、京都市内で活用させて頂きます。何卒ご協力のほど、お願いいたします。
       </div>
     </template>
     <template v-else>
-      <h5>Donations and Corporate Sponsorship</h5>
+      <h3>Donations and Corporate Sponsorship</h3>
       <div>
         Playtest Kyoto is run by a non-profit, independent
         executive committee with a minimal budget.

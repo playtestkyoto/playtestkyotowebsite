@@ -10,14 +10,14 @@
         class="member"
         :style="{
           transform: `rotate(${c.randomIntBetweenInclusive(
-            -15,
-            15,
+            appState.mobile.value ? -5 : -15,
+            appState.mobile.value ? 5 : 15,
           )}deg) translateX(${c.randomIntBetweenInclusive(
-            -20,
-            20,
+            appState.mobile.value ? -5 : -20,
+            appState.mobile.value ? 5 : 20,
           )}px) translateY(${c.randomIntBetweenInclusive(
-            -50,
-            50,
+            appState.mobile.value ? 0 : -50,
+            appState.mobile.value ? 0 : 50,
           )}px)`,
         }"
       >
@@ -57,14 +57,14 @@
         class="member"
         :style="{
           transform: `rotate(${c.randomIntBetweenInclusive(
-            -15,
-            15,
+            appState.mobile.value ? -5 : -15,
+            appState.mobile.value ? 5 : 15,
           )}deg) translateX(${c.randomIntBetweenInclusive(
-            -20,
-            20,
+            appState.mobile.value ? -5 : -20,
+            appState.mobile.value ? 5 : 20,
           )}px) translateY(${c.randomIntBetweenInclusive(
-            -50,
-            50,
+            appState.mobile.value ? 0 : -50,
+            appState.mobile.value ? 0 : 50,
           )}px)`,
         }"
       >
@@ -117,14 +117,14 @@
         class="member"
         :style="{
           transform: `rotate(${c.randomIntBetweenInclusive(
-            -15,
-            15,
+            appState.mobile.value ? -5 : -15,
+            appState.mobile.value ? 5 : 15,
           )}deg) translateX(${c.randomIntBetweenInclusive(
-            -20,
-            20,
+            appState.mobile.value ? -5 : -20,
+            appState.mobile.value ? 5 : 20,
           )}px) translateY(${c.randomIntBetweenInclusive(
-            -50,
-            50,
+            appState.mobile.value ? 0 : -50,
+            appState.mobile.value ? 0 : 50,
           )}px)`,
         }"
       >
@@ -183,14 +183,14 @@
         class="member"
         :style="{
           transform: `rotate(${c.randomIntBetweenInclusive(
-            -15,
-            15,
+            appState.mobile.value ? -5 : -15,
+            appState.mobile.value ? 5 : 15,
           )}deg) translateX(${c.randomIntBetweenInclusive(
-            -20,
-            20,
+            appState.mobile.value ? -5 : -20,
+            appState.mobile.value ? 5 : 20,
           )}px) translateY(${c.randomIntBetweenInclusive(
-            -50,
-            50,
+            appState.mobile.value ? 0 : -50,
+            appState.mobile.value ? 0 : 50,
           )}px)`,
         }"
       >
@@ -234,14 +234,14 @@
         class="member"
         :style="{
           transform: `rotate(${c.randomIntBetweenInclusive(
-            -15,
-            15,
+            appState.mobile.value ? -5 : -15,
+            appState.mobile.value ? 5 : 15,
           )}deg) translateX(${c.randomIntBetweenInclusive(
-            -20,
-            20,
+            appState.mobile.value ? -5 : -20,
+            appState.mobile.value ? 5 : 20,
           )}px) translateY(${c.randomIntBetweenInclusive(
-            -50,
-            50,
+            appState.mobile.value ? 0 : -50,
+            appState.mobile.value ? 0 : 50,
           )}px)`,
         }"
       >
@@ -292,6 +292,11 @@ const locale = computed(() => i18n.locale.value)
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5em 5em;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 4em;
+  }
 
   .personImage {
     position: relative;

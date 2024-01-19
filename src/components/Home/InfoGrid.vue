@@ -82,11 +82,19 @@ const locale = computed(() => i18n.locale.value)
   border: var(--border);
   border-bottom: none;
   max-width: 1200px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 }
 .row {
   display: grid;
   grid-template-columns: 200px 1fr;
   border-bottom: var(--border);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
   & > * {
     padding: 0.5em;
@@ -96,9 +104,19 @@ const locale = computed(() => i18n.locale.value)
     font-weight: bold;
     text-align: right;
     border-right: var(--border);
+
+    @media (max-width: 768px) {
+      text-align: left;
+      border: none;
+    }
   }
   & > div:nth-child(2) {
     padding-left: 0.75em;
+
+    @media (max-width: 768px) {
+      padding: 0.5em;
+      padding-top: 0;
+    }
   }
 }
 </style>

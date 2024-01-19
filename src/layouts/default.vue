@@ -14,11 +14,27 @@ import * as appState from '~/assets/state'
 onMounted(async () => {
   updateWindowSizeVars()
   window.addEventListener('resize', updateWindowSizeVars)
+
+  useRouter().afterEach(logPageView)
+  logPageView()
 })
 
 function updateWindowSizeVars() {
   appState.winSize.value.width = window.innerWidth
   appState.winSize.value.height = window.innerHeight
+}
+
+function logPageView() {
+  fetch(`/analytics/page`, {
+    method: 'POST',
+    body: JSON.stringify({
+      path: useRoute().path,
+      query: useRoute().query,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
 }
 </script>
 

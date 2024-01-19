@@ -14,7 +14,9 @@
       class="absolute"
       :width="width"
       :height="height"
-      :viewBox="`0 0 ${width} ${height}`"
+      :viewBox="`${width * -0.1} ${-height * 0.1} ${
+        width * 1.2
+      } ${height * 1.2}`"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -333,6 +335,8 @@ function keyListener(e: KeyboardEvent) {
   width: 700px;
   height: 300px;
   user-select: none;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 text {
   font-size: calc(
