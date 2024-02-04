@@ -1,71 +1,53 @@
 <template>
   <div class="main flexcolumn fullheight">
-    <HeroTest1
-      class="hero1"
-      text="PLAYTEST KYOTO 2024"
-      :images="[
-        '/images/hero/1.jpg',
-        '/images/hero/2.jpg',
-        '/images/hero/3.jpg',
-        '/images/hero/4.jpg',
-      ]"
-      :highlight="[
-        'lightgreen',
-        'yellow',
-        'magenta',
-        'cyan',
-        // 'lightgray',
-      ]"
-      :changeEvery="2000"
-    />
+    <HomeIntro />
 
-    <Marquee class="padbot">
-      <h3 class="nowrap marnone">
-        <span v-if="locale === 'ja'">
-          都市空間における”遊び”のフェスティバル
-        </span>
-        <span v-else
-          >A Playground for Experimental Urban Games</span
-        >
-        👉&nbsp;
-      </h3>
-    </Marquee>
-    <div
-      class="contentcolumn padtop"
-      :class="{
-        martopbig: !appState.mobile.value,
-        padtopbig: !appState.mobile.value,
-      }"
-    >
+    <div class="marbotbig">
       <HomeAbout />
     </div>
 
-    <div class="bg1 martopbig">
-      <div
-        class="pad martop marbot"
-        :class="{
-          padbig: !appState.mobile.value,
-        }"
-      >
+    <div class="relative bg5 wavyMask2">
+      <div class="z2">
         <HomeInfoGrid />
       </div>
     </div>
 
-    <div class="bg2 nooverflow">
+    <!-- <div
+      class="bg2 nooverflow wavyMask"
+      style="animation: rainbow 20s infinite alternate"
+    >
       <div class="flexcenter padtop padbot">
-        <Vogue>
-          <Marquee>
+        <Vogue :speed="0.7">
+          <Marquee :speed="0.7">
             <h1
-              class="nowrap marnone padrightsmall padleftsmall textcenter"
+              class="nowrap marnone padrightsmall padleftsmall textcenter bold"
             >
-              <u> 2024年3月15日だよ！</u>
+              <span>
+                <span v-if="locale === 'ja'"
+                  >3月29日開催！</span
+                >
+                <span v-else
+                  >Starting from March 29th!</span
+                >
+                <a
+                  href="#"
+                  class="button small marnone secondary"
+                  target="_blank"
+                >
+                  <span v-if="locale === 'ja'"
+                    >切符をゲット</span
+                  >
+                  <span v-else>Buy Tickets</span>
+                </a>
+                &nbsp;
+              </span>
             </h1></Marquee
           >
         </Vogue>
       </div>
-    </div>
+    </div> -->
 
-    <div class="relative martop padtopbig padbotbig">
+    <!-- <div class="relative martop padtopbig padbotbig">
       <BoxInText
         class="bold caps"
         :offset="appState.mobile.value ? '.2em' : '2em'"
@@ -97,15 +79,31 @@
           }"
         />
       </div>
-    </div>
-    <div class="bg1">
+    </div> -->
+
+    <div class="padtopbig bgd">
       <div
         class="contentcolumn padtopbig padbotbig marbotbig"
       >
-        <HomeMembers class="padbotbig" />
+        <HomeGames class="padbotbig" />
       </div>
     </div>
-    <div class="bg1">
+
+    <!-- <div class="homeBg3">
+      <div
+        class="contentcolumn padtopbig padbotbig marbotbig"
+      >
+        <HomeSponsors class="padbotbig" />
+      </div>
+    </div> -->
+
+    <div class="bg3 z1">
+      <div class="contentcolumn padtopbig">
+        <HomeTeam />
+      </div>
+    </div>
+
+    <div class="homeBg1 z3">
       <div class="contentcolumn padtopbig padbotbig">
         <HomeFooter />
       </div>
@@ -127,69 +125,32 @@ const locale = computed(() => i18n.locale.value)
   margin: 0 auto;
 }
 
-.hero1 {
-  position: relative;
-  z-index: 0;
-  width: 100%;
-  height: calc(min(90vh, 1000px, 70vw));
-  margin-bottom: calc(-1 * (min(200px, 20vw)));
+// .hero1 {
+//   position: relative;
+//   z-index: 0;
+//   width: 100%;
+//   height: calc(min(90vh, 1000px, 70vw));
+//   margin-bottom: calc(-1 * (min(200px, 20vw)));
 
-  @media (max-width: 768px) {
-    margin-top: 5em;
-    transform: scale(1.4);
-    margin-bottom: calc(-1 * (min(100px, 10vw)));
-  }
-}
+//   @media (max-width: 768px) {
+//     margin-top: 5em;
+//     transform: scale(1.4);
+//     margin-bottom: calc(-1 * (min(100px, 10vw)));
+//   }
+// }
 
-.bg1 {
+.homeBg1 {
   background: var(--text);
   color: var(--bg);
 }
-.bg2 {
+.homeBg2 {
   color: var(--text);
   animation: rainbow 5s infinite alternate;
-  --size: 15px;
-  padding-top: calc(var(--size) * 2);
-  padding-bottom: calc(var(--size) * 2);
-  margin-top: calc(-1 * var(--size) * 2);
-  margin-bottom: calc(-1 * var(--size) * 2);
-  backface-visibility: hidden;
-
-  --mask: radial-gradient(
-        var(--size) at 25% 0,
-        #0000 98%,
-        #000
-      )
-      50% var(--size) / calc(var(--size) * 4) 51% repeat-x,
-    radial-gradient(
-        var(--size) at 75% 50%,
-        #000 99%,
-        #0000 101%
-      )
-      top/calc(var(--size) * 4) calc(var(--size) * 2)
-      repeat-x,
-    radial-gradient(
-        var(--size) at 75% 100%,
-        #0000 98%,
-        #000
-      )
-      calc(50% + calc(var(--size) * 2))
-      calc(100% - var(--size)) / calc(var(--size) * 4) 51%
-      repeat-x,
-    radial-gradient(
-        var(--size) at 25% 50%,
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% + calc(var(--size) * 2)) 100% /
-      calc(var(--size) * 4) calc(var(--size) * 2) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 
-.bg3 {
+.homeBg3 {
   position: relative;
-  background: var(--color3);
+  background: var(--bg);
   color: var(--text);
 
   // &:after {
@@ -215,20 +176,5 @@ const locale = computed(() => i18n.locale.value)
   //   z-index: 0;
   //   pointer-events: none;
   // }
-}
-
-@keyframes rainbow {
-  0% {
-    background: var(--color1);
-  }
-  30% {
-    background: var(--color2);
-  }
-  70% {
-    background: var(--color3);
-  }
-  100% {
-    background: var(--color4);
-  }
 }
 </style>

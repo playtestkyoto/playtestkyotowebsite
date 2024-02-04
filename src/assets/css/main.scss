@@ -1,54 +1,35 @@
 @import './normalize.css';
 
-@font-face {
-  font-family: 'GT Cinetype';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url('/fonts/GT-Cinetype-Light.ttf')
-    format('truetype');
-}
-@font-face {
-  font-family: 'GT Cinetype';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/GT-Cinetype-Regular.ttf')
-    format('truetype');
-}
-@font-face {
-  font-family: 'GT Cinetype';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/GT-Cinetype-Bold.otf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Prompt:wght@100&display=swap');
 
 :root {
-  --fontStack: 'GT Cinetype', 'Helvetica', 'Arial',
-    'Noto Color Emoji', 'Noto Emoji', '秀英角ゴシック銀',
-    'Shuei Kaku', 'Shuei KakuGo Gin Std',
-    'A P-OTF Shuei KakuGo Gin Std', 'Shuei KakuGo Gin Std',
+  --fontStack: 'DM Sans', 'Noto Sans JP', 'Noto Sans',
+    'Helvetica', 'Arial', 'Noto Color Emoji', 'Noto Emoji',
     'Yu Gothic', 'YuGothic', '游ゴシック',
     'Hiragino Kaku Gothic ProN', sans-serif;
-  --bg: #f8f8f8;
-  --bg-d: #eee;
-  --bg-d2: #bbb;
-  --text: #222;
-  --text-l: #444;
-  --text-l2: #666;
+  --bg: #fff;
+  --bg-d: #f8f8f8;
+  --bg-d2: #ddd;
+  --bg-d3: #bbb;
+  --text: #000;
+  --text-l: #222;
+  --text-l2: #444;
 
-  --color1: rgb(255, 240, 73);
-  --color1D: rgb(232, 213, 0);
-  --color2: cyan;
-  --color2D: rgb(0, 215, 215);
-  --color3: lightgreen;
-  --color3D: rgb(0, 218, 0);
-  --color4: rgb(255, 165, 255);
-  --color4D: rgb(255, 0, 255);
+  --c1: #ed6a3c; //#ff5f28;
+  --c1Text: var(--bg);
+  --c2: #fdf652; //#fff500;
+  --c2Text: var(--text);
+  --c3: #71ed5b; //#1ef03c;
+  --c3Text: var(--text);
+  --c4: #2963f5; //#0064ff;
+  --c4Text: var(--bg);
+  --c5: #943af5; //#a032ff;
+  --c5Text: var(--bg);
+  --c6: #ec56ba; //#ff46be;
+  --c6Text: var(--bg);
 
-  --warning: rgb(234, 109, 78);
-  --borderRadius: 3px;
+  --warning: var(--c1);
+  --borderRadius: 0;
 
   --marTiny: 0.5em;
   --marSmall: 1em;
@@ -156,9 +137,11 @@ a:hover,
 .hl1,
 .hl2,
 .hl3,
-.hl4 {
+.hl4,
+.hl5,
+.hl6 {
   position: relative;
-  --highlight: var(--color1);
+  --highlight: var(--c1);
 
   &::after {
     content: '';
@@ -166,7 +149,7 @@ a:hover,
     left: 0;
     bottom: 0.2em;
     width: 100%;
-    height: 0.6em;
+    height: 0.2em;
     background: var(--highlight);
     z-index: -1;
   }
@@ -179,26 +162,223 @@ a:hover,
   // line-height: 1em;
 }
 .hl2 {
-  --highlight: var(--color2);
+  --highlight: var(--c2);
 }
 .hl3 {
-  --highlight: var(--color3);
+  --highlight: var(--c3);
 }
 .hl4 {
-  --highlight: var(--color4);
+  --highlight: var(--c4);
+}
+.hl5 {
+  --highlight: var(--c5);
+}
+.hl6 {
+  --highlight: var(--c6);
 }
 
-u {
-  text-decoration: underline;
-  text-decoration-style: dashed;
-  animation: animateUnderline 3s linear infinite alternate;
+.bg1 {
+  background: var(--c1);
+  color: var(--c1Text);
 }
-@keyframes animateUnderline {
+.bg2 {
+  background: var(--c2);
+  color: var(--c2Text);
+}
+.bg3 {
+  background: var(--c3);
+  color: var(--c3Text);
+}
+.bg4 {
+  background: var(--c4);
+  color: var(--c4Text);
+}
+.bg5 {
+  background: var(--c5);
+  color: var(--c5Text);
+}
+.bg6 {
+  background: var(--c6);
+  color: var(--c6Text);
+}
+
+.bgt1,
+.bgt {
+  background: var(--text);
+  color: var(--bg);
+}
+.bgt2 {
+  background: var(--text-l);
+  color: var(--bg);
+}
+.bgt3 {
+  background: var(--text-l2);
+  color: var(--bg);
+}
+
+.bgd1,
+.bgd {
+  background: var(--bg-d);
+  color: var(--text);
+}
+.bgd2 {
+  background: var(--bg-d2);
+  color: var(--text);
+}
+
+.wavyMask {
+  position: relative;
+  z-index: 2;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  --size: 25px;
+  padding-top: calc(var(--size) * 2);
+  padding-bottom: calc(var(--size) * 2);
+  margin-top: calc(-1 * var(--size) * 2);
+  margin-bottom: calc(-1 * var(--size) * 2);
+
+  --mask: radial-gradient(
+        var(--size) at 25% 0,
+        #0000 98%,
+        #000
+      )
+      50% var(--size) / calc(var(--size) * 4) 51% repeat-x,
+    radial-gradient(
+        var(--size) at 75% 50%,
+        #000 99%,
+        #0000 101%
+      )
+      top/calc(var(--size) * 4) calc(var(--size) * 2)
+      repeat-x,
+    radial-gradient(
+        var(--size) at 75% 100%,
+        #0000 98%,
+        #000
+      )
+      calc(50% + calc(var(--size) * 2))
+      calc(100% - var(--size)) / calc(var(--size) * 4) 51%
+      repeat-x,
+    radial-gradient(
+        var(--size) at 25% 50%,
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% + calc(var(--size) * 2)) 100% /
+      calc(var(--size) * 4) calc(var(--size) * 2) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.wavyMask2 {
+  --size: 25px;
+  padding-top: calc(var(--size) * 2);
+  padding-bottom: calc(var(--size) * 2);
+  margin-top: calc(-1 * var(--size) * 2);
+  margin-bottom: calc(-1 * var(--size) * 2);
+
+  --mask: conic-gradient(
+        from 135deg at top,
+        #0000,
+        #000 1deg 89deg,
+        #0000 90deg
+      )
+      top/60.00px 51% repeat-x,
+    conic-gradient(
+        from -45deg at bottom,
+        #0000,
+        #000 1deg 89deg,
+        #0000 90deg
+      )
+      bottom/60.00px 51% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+@keyframes rainbow {
   0% {
-    text-decoration-thickness: 0.04em;
+    background-color: var(--c1);
+  }
+  25% {
+    background-color: var(--c2);
+  }
+  50% {
+    background-color: var(--c3);
+  }
+  75% {
+    background-color: var(--c4);
   }
   100% {
-    text-decoration-thickness: 0.2em;
+    background-color: var(--c5);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinSlow {
+  animation: spin 180s linear infinite;
+}
+
+@keyframes vogueLazy {
+  0% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+
+  20% {
+    transform: rotate(2deg) scale(1.1);
+  }
+
+  40% {
+    transform: rotate(-3deg) scale(1.02);
+  }
+
+  60% {
+    transform: rotate(5deg) scale(1.08);
+  }
+
+  80% {
+    transform: rotate(-1deg) scale(1.11);
+  }
+
+  100% {
+    transform: rotate(3deg) scale(1.04);
+  }
+}
+.vogueLazy {
+  animation: vogueLazy 25s ease alternate infinite;
+}
+.vogueLazy2 {
+  animation: vogueLazy 19s ease alternate infinite;
+  animation-delay: -31s;
+}
+.vogueLazy3 {
+  animation: vogueLazy 21s ease alternate infinite;
+  animation-delay: -27s;
+}
+
+.insetLine {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    --offset: var(--insetOffset, 2em);
+    --width: var(--insetWidth, 2px);
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    top: var(--offset);
+    box-shadow: inset 0 0 0 var(--width)
+      var(--insetColor, var(--text));
+    z-index: 6;
+
+    mix-blend-mode: multiply;
   }
 }
 
@@ -210,6 +390,14 @@ u {
 // }
 .highlight {
   color: var(--highlight);
+}
+.todo {
+  color: red;
+  font-weight: bold;
+
+  &:after {
+    content: ' (TODO)';
+  }
 }
 .textshadow {
   text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.7);
@@ -314,23 +502,36 @@ img {
   opacity: 0.9;
 }
 
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
 .z0 {
-  z-index: 0;
+  position: relative;
+  z-index: 0 !important;
 }
 .z1 {
-  z-index: 1;
+  position: relative;
+  z-index: 1 !important;
 }
 .z2 {
-  z-index: 2;
+  position: relative;
+  z-index: 2 !important;
 }
 .z3 {
-  z-index: 3;
+  position: relative;
+  z-index: 3 !important;
 }
 .z4 {
-  z-index: 4;
+  position: relative;
+  z-index: 4 !important;
 }
 .z5 {
-  z-index: 5;
+  position: relative;
+  z-index: 5 !important;
 }
 
 hr {
@@ -517,20 +718,47 @@ input[type='range'] {
 button,
 .button {
   &:not(.primary) {
-    --buttonColor: #aaa;
+    --buttonColor: var(--c2);
+    --textColor: var(--c2Text);
   }
 
   &.primary {
-    --buttonColor: var(--highlight, #555);
+    --buttonColor: var(--highlight, var(--c1));
+    --textColor: var(--c1Text);
+  }
+  &.c2 {
+    --buttonColor: var(--highlight, var(--c3));
+    --textColor: var(--c3Text);
+  }
+  &.c3 {
+    --buttonColor: var(--highlight, var(--c4));
+    --textColor: var(--c4Text);
+  }
+  &.c4 {
+    --buttonColor: var(--highlight, var(--c5));
+    --textColor: var(--c5Text);
+  }
+  &.c5 {
+    --buttonColor: var(--highlight, var(--c6));
+    --textColor: var(--c6Text);
+  }
+  &.c6 {
+    --buttonColor: var(--highlight, var(--c1));
+    --textColor: var(--c1Text);
+  }
+  &.white {
+    --buttonColor: var(--bg);
+    --textColor: var(--text);
   }
 
   &.warning {
     --buttonColor: var(--warning);
+    --textColor: var(--c1Text);
   }
 
   border: none;
   background: var(--buttonColor);
-  color: white !important;
+  color: var(--textColor) !important;
   font-weight: 500;
   cursor: pointer;
   outline: none;
@@ -538,11 +766,11 @@ button,
   border-radius: var(--borderRadius);
   font-size: 1em;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 900 !important;
   font-family: var(--fontStack);
   text-align: center;
   text-decoration: none !important;
-  transition: all 0.15s ease-in-out;
+  // transition: all 0.15s ease-in-out;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -565,7 +793,7 @@ button,
   }
 
   &.invert {
-    background: white;
+    background: var(--textColor);
     color: var(--buttonColor) !important;
   }
 
@@ -580,7 +808,7 @@ button,
   }
 
   &.big {
-    font-size: 1em;
+    font-size: 1.5em;
     display: flex;
     width: 100%;
     padding: 1.5em 2em;
@@ -597,6 +825,10 @@ button,
     padding: 0.4em 0.4em;
     font-weight: 400;
   }
+}
+
+.flex1 {
+  flex: 1;
 }
 
 .flex {
@@ -708,9 +940,6 @@ button,
 .martop {
   margin-top: var(--mar) !important;
 }
-.marauto {
-  margin: auto !important;
-}
 .martopsmall {
   margin-top: var(--marSmall) !important;
 }
@@ -821,17 +1050,6 @@ button,
 }
 .padrighttiny {
   padding-right: var(--marTiny) !important;
-}
-
-.relative {
-  position: relative;
-}
-.absolute {
-  position: absolute;
-}
-
-.z2 {
-  z-index: 2;
 }
 
 .scroll {

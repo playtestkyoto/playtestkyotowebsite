@@ -2,7 +2,7 @@
   <div class="grid">
     <div class="row">
       <div v-if="locale === 'ja'">会期 📆</div>
-      <div v-else></div>
+      <div v-else><span class="todo"></span></div>
 
       <div v-if="locale === 'ja'">
         2024年3月15日（金）〜17日（日）計3日間
@@ -14,7 +14,7 @@
       <div v-if="locale === 'ja'">会場 🎪</div>
       <div v-else></div>
 
-      <div v-if="locale === 'ja'">問い合わせ</div>
+      <div v-if="locale === 'ja'">京都市内随所</div>
       <div v-else></div>
     </div>
 
@@ -22,7 +22,7 @@
       <div v-if="locale === 'ja'">時間 ⏰</div>
       <div v-else></div>
 
-      <div v-if="locale === 'ja'">11:00 — 18:00</div>
+      <div v-if="locale === 'ja'">12:00 — 18:00</div>
       <div v-else></div>
     </div>
 
@@ -32,7 +32,9 @@
 
       <div v-if="locale === 'ja'">
         1日券：1000円 3日共通券：1500円 全会場共通
-        チケットの購入はオンラインのみ /
+        <br />
+        チケットの購入はオンラインのみ
+        <br />
         リンクはこちら：🔴🔴🔴
       </div>
       <div v-else></div>
@@ -43,8 +45,7 @@
       <div v-else></div>
 
       <div v-if="locale === 'ja'">
-        Urban Play Festival Kyoto
-        実行委員会（代表：杉田真理子）
+        Playtest 実行委員会（代表：杉田真理子）
       </div>
       <div v-else></div>
     </div>
@@ -76,12 +77,14 @@ const locale = computed(() => i18n.locale.value)
 
 <style lang="scss" scoped>
 .grid {
-  --border: 2px dashed var(--text-l2);
-  margin: 0 auto;
-  font-size: 1.5em;
-  border: var(--border);
+  --border: 2px dashed rgba(0, 0, 0, 0.2);
+  margin: -8em auto;
+  font-size: 1.4em;
+  // border: var(--border);
   border-bottom: none;
-  max-width: 1200px;
+  max-width: 700px;
+  // background: var(--bg-d);
+  // color: var(--text);
 
   @media (max-width: 768px) {
     font-size: 1.2rem;
@@ -89,21 +92,33 @@ const locale = computed(() => i18n.locale.value)
 }
 .row {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 180px 1fr;
   border-bottom: var(--border);
+
+  &:first-child {
+    & > div {
+      padding-top: 10em;
+    }
+  }
+  &:last-child {
+    & > div {
+      padding-bottom: 10em;
+    }
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
   & > * {
-    padding: 0.5em;
+    padding: 0.8em 0.5em;
   }
 
   & > div:nth-child(1) {
     font-weight: bold;
     text-align: right;
     border-right: var(--border);
+    padding-left: 0;
 
     @media (max-width: 768px) {
       text-align: left;
@@ -112,6 +127,7 @@ const locale = computed(() => i18n.locale.value)
   }
   & > div:nth-child(2) {
     padding-left: 0.75em;
+    padding-right: 0;
 
     @media (max-width: 768px) {
       padding: 0.5em;

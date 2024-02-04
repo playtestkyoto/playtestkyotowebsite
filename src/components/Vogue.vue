@@ -1,25 +1,41 @@
 <template>
-  <div class="vogue">
-    <div class="vogue2">
-      <slot></slot>
+  <div>
+    <div
+      class="vogue"
+      :style="{
+        '--vogue-speed': speed,
+      }"
+    >
+      <div class="vogue2">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import * as c from '~/assets/common'
+
+const { speed } = defineProps({
+  speed: {
+    type: Number,
+    default: 1,
+  },
+})
 </script>
 
 <style lang="scss" scoped>
 .vogue {
   position: relative;
   transform-origin: center;
-  animation: vogue 1s ease-in-out infinite alternate;
+  animation: vogue calc(1s / var(--vogue-speed)) ease-in-out
+    infinite alternate;
 }
 .vogue2 {
   position: relative;
   transform-origin: center;
-  animation: vogue2 1.3s ease-in-out infinite alternate;
+  animation: vogue2 calc(1.3s / var(--vogue-speed))
+    ease-in-out infinite alternate;
 }
 
 @keyframes vogue {

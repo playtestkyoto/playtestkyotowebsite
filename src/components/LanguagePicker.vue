@@ -27,24 +27,26 @@ const switchLocalePath = useSwitchLocalePath()
 <style lang="scss" scoped>
 .languagePicker {
   position: absolute;
-  z-index: 3;
+  z-index: 100;
   top: 2em;
   right: 2em;
 }
 a {
-  border: 2px solid var(--bg);
-  padding: 0.5rem;
-  background: var(--bg);
-  color: var(--text) !important;
+  border: 2px solid var(--text);
+  padding: 0.5rem 0.6rem 0.4rem 0.6rem;
+  line-height: 1;
+  background: var(--text);
+  color: var(--bg) !important;
+  text-decoration: none;
 
   &.current {
-    background: var(--text);
-    color: var(--bg) !important;
+    background: var(--bg);
+    color: var(--text) !important;
   }
 
   &:not(.current):hover {
-    background: var(--text);
-    color: var(--bg) !important;
+    background: var(--bg);
+    color: var(--text) !important;
   }
 }
 </style>

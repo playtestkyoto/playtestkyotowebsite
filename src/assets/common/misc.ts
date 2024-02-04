@@ -152,7 +152,7 @@ export function arrayMove(
   arr.splice(newIndex, 0, arr.splice(oldIndex, 1)[0])
 }
 
-export function shuffleArray(array: any[]): any[] {
+export function shuffleArray<T>(array: T[]): T[] {
   const toReturn = [...array]
   for (let i = toReturn.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1))
