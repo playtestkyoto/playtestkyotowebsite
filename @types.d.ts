@@ -24,6 +24,8 @@ interface Game {
   image: string
   name: string
   description: string
+  descriptionJa: string
   venue: Venue
   designer?: Designer
+  ticketUrl: string
 }

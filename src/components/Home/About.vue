@@ -33,7 +33,9 @@
           <span class="hl1">Playtest Kyoto</span>は、<br />
           <span class="hl2">都市空間</span>を舞台とした
           <br />
-          <span class="hl3">ゲーム</span>や<span class="hl3">遊び</span>を行う
+          <span class="hl3">ゲーム</span>や<span class="hl3"
+            >遊び</span
+          >を行う
           <br />
           <span class="hl4">3日間のイベント</span>です。
         </h2>
@@ -42,13 +44,13 @@
       などの公共空間や、文化創造拠点や未活用の遊休不動産などを舞台に、子供から高齢者まで誰でも参加可能なゲームを制作します。街区全体を活用したトレジャーハンティングや、チームに分かれてミッションをクリアしていくストリート版借り物競争、アプリを活用した街中でのAR体験など、デジタルからフィジカルまでを横断しながら、京都という街を捉え直し、遊び尽くす3日間です。 -->
 
         <img
-          class="doodad"
+          class="doodad nomobile"
           style="transform: translateY(-50%) rotate(-90deg)"
           src="/images/home/doodad1.svg"
         />
 
         <img
-          class="doodad right"
+          class="doodad nomobile right"
           src="/images/home/doodad2.svg"
           style="transform: translateY(100%)"
         />
@@ -74,37 +76,44 @@
           in <span class="hl4">urban spaces</span>.
         </h2>
         <img
-          class="doodad"
+          class="doodad nomobile"
           style="transform: translateY(-50%) rotate(-90deg)"
           src="/images/home/doodad1.svg"
         />
 
         <img
-          class="doodad right"
+          class="doodad nomobile right"
           src="/images/home/doodad2.svg"
           style="transform: translateY(100%)"
         />
 
         <div>
-          In 2006 the “Come Out & Play” festival was held in New York City,
-          bringing together game designers and residents of the city in public
-          spaces with a wide variety of playful activities. The next 15 years
-          saw a wave of festivals focused on playful art, play in public spaces,
-          and games across the digital-analog spectrum, such as Plaython in
-          Greece and Playpublik in Poland, fueled in part by the growing indie
-          game community. While diverse in theme and structure, these events
-          shared an embrace of playfulness as a key to engagement, connection,
-          and activation of the city―in a sense, they were simply gathering
-          points for people seeking fun, new experiences.
+          In 2006 the “Come Out & Play” festival was held in
+          New York City, bringing together game designers
+          and residents of the city in public spaces with a
+          wide variety of playful activities. The next 15
+          years saw a wave of festivals focused on playful
+          art, play in public spaces, and games across the
+          digital-analog spectrum, such as Plaython in
+          Greece and Playpublik in Poland, fueled in part by
+          the growing indie game community. While diverse in
+          theme and structure, these events shared an
+          embrace of playfulness as a key to engagement,
+          connection, and activation of the city―in a sense,
+          they were simply gathering points for people
+          seeking fun, new experiences.
           <br />
           <br />
-          COVID-19 restrictions brought a sudden end to in-person festivals, but
-          in the last year they have finally begun to re-emerge. What would an
-          urban play festival in Kyoto look like? What fun, new experiences
-          could be found there? Join game designers, artists, and residents of
-          Kyoto on March 29th-31st as they answer these questions through
-          interactive installations, team-based games, and playful art tailored
-          to specific locations throughout the city.
+          COVID-19 restrictions brought a sudden end to
+          in-person festivals, but in the last year they
+          have finally begun to re-emerge. What would an
+          urban play festival in Kyoto look like? What fun,
+          new experiences could be found there? Join game
+          designers, artists, and residents of Kyoto on
+          March 29th-31st as they answer these questions
+          through interactive installations, team-based
+          games, and playful art tailored to specific
+          locations throughout the city.
         </div>
       </div>
     </div>
@@ -112,13 +121,19 @@
 </template>
 
 <script setup lang="ts">
-import * as c from "~/assets/common";
-import * as appState from "~/assets/state";
-const i18n = useI18n();
-const locale = computed(() => i18n.locale.value);
+import * as c from '~/assets/common'
+import * as appState from '~/assets/state'
+const i18n = useI18n()
+const locale = computed(() => i18n.locale.value)
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+}
 .horizpane {
   display: flex;
   align-items: center;

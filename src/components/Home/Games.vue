@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="marbot">
+    <h2 class="marbot textcenter bold">
       <span v-if="locale === 'ja'">ゲーム</span>
       <span v-else>The Games</span>
     </h2>
@@ -60,13 +60,37 @@
               }"
               class="image"
             />
+            <div class="ticketLink">
+              <a
+                class="button black insetLine"
+                style="
+                  --insetOffset: 3px;
+                  --insetColor: white;
+                  --insetWidth: 2px;
+                "
+                href="#"
+              >
+                <span class="padtiny">
+                  <span v-if="locale === 'ja'"
+                    >チケット購入</span
+                  >
+                  <span v-else>Get Tickets</span>
+                  👈
+                </span>
+              </a>
+            </div>
 
             <div class="body padbot">
               <h3 class="marbottiny">
                 {{ game.name }}
               </h3>
               <div class="small">
-                {{ game.description }}
+                <template v-if="locale === 'ja'">{{
+                  game.descriptionJa
+                }}</template>
+                <template v-else>{{
+                  game.description
+                }}</template>
               </div>
             </div>
           </div>
@@ -130,9 +154,13 @@ const shuffledGames = c.shuffleArray(c.games)
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 4em;
+    --pad: 1em;
+    --overflow: 1em;
+    grid-gap: 2em;
   }
 
   .game {
+    padding: 1em;
     position: relative;
 
     .bgbox {
@@ -183,7 +211,18 @@ const shuffledGames = c.shuffleArray(c.games)
     left: calc(-1 * var(--overflow));
   }
 
+  .ticketLink {
+    position: absolute;
+    right: calc(var(--pad) * 0.3);
+    transform: translateY(-110%) rotate(5deg);
+
+    a {
+      box-shadow: 0 0.2em 0.5em rgba(black, 0.3);
+    }
+  }
+
   .body {
+    margin-top: 0.3em;
     padding-inline: var(--pad);
     font-size: 1.1em;
 
@@ -211,6 +250,11 @@ const shuffledGames = c.shuffleArray(c.games)
     // background: var(--text);
     aspect-ratio: 1;
     clip-path: circle(50% at 50% 50%);
+
+    @media (max-width: 768px) {
+      width: calc(100% - var(--overflow) * 2);
+      left: calc(var(--overflow));
+    }
 
     .locationBg {
       position: absolute;
@@ -279,19 +323,6 @@ const shuffledGames = c.shuffleArray(c.games)
           }
         }
       }
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 1px;
-        transform: translateX(-50%);
-        height: 100%;
-        background: var(--bg);
-        opacity: 0.3;
-        z-index: 4;
-      }
     }
 
     .locationBubble {
@@ -347,6 +378,43 @@ const shuffledGames = c.shuffleArray(c.games)
 
       .links {
         opacity: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .locationBg {
+        // background-color: rgba(0, 0, 0, 0.4);
+        transform: scale(1.02);
+        filter: blur(2px);
+      }
+
+      .locationBubble {
+        transform: translate(-50%, -80%);
+
+        // &:after {
+        //   opacity: 0;
+        // }
+      }
+
+      .links {
+        opacity: 1;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          width: 1px;
+          transform: translateX(-50%);
+          height: 20%;
+          background: var(--bg);
+          opacity: 0.3;
+          z-index: 4;
+        }
+
+        a:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
       }
     }
   }

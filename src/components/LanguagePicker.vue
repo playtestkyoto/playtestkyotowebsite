@@ -30,6 +30,11 @@ const switchLocalePath = useSwitchLocalePath()
   z-index: 100;
   top: 2em;
   right: 2em;
+
+  @media (max-width: 768px) {
+    top: 1em;
+    right: 1em;
+  }
 }
 a {
   border: 2px solid var(--text);

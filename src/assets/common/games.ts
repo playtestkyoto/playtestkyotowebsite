@@ -7,7 +7,7 @@ export const venues: { [key: string]: Venue } = {
     color: 'var(--c1)',
   },
   kyotouniversityofart: {
-    name: 'Kyoto University of the Arts',
+    name: 'Kyoto Univ. of the Arts',
     url: 'https://www.kyoto-art.ac.jp/en/',
     image: '/images/venues/kyotouniversityofart.jpg',
     mapUrl: 'https://maps.app.goo.gl/z9LNHKRa1hVwRaG86',
@@ -93,45 +93,61 @@ export const games: Game[] = [
     image: '/images/games/zack.webp',
     name: 'PLAY SESSION',
     description:
-      'A series of simple games taken from improv theater and dance-movement practices for connection, creativity and fun! Afterwards, we will create small zines to reflect on the experience. アーティスト・William Zack Woodによる、即興演劇やダンス・ムーブメントの実践から学んだシンプルなゲーム。ゲーム終了後は、体験を振り返るために小冊子を作ります。',
+      'A series of simple games taken from improv theater and dance-movement practices for connection, creativity and fun! Afterwards, we will create small zines to reflect on the experience.',
+    descriptionJa:
+      'アーティスト・William Zack Woodによる、即興演劇やダンス・ムーブメントの実践から学んだシンプルなゲーム。ゲーム終了後は、体験を振り返るために小冊子を作ります。',
     venue: venues.bridgestudio,
     designer: designers.zack,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/jam.jpg',
     name: 'Physical Game Jam',
-    description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest physical games over the course of a day. Playtest運営チームによる、1日で新しいゲームのプロトタイプを作るGame Jamを開催。街なかや公共空間を舞台にしたフィジカルなゲームのアイデアをチームで出し、プロトタイプを作り、検証・発表までを行うワークショップです。`,
+    description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest physical games over the course of a day. `,
+    descriptionJa:
+      'Playtest運営チームによる、1日で新しいゲームのプロトタイプを作るGame Jamを開催。街なかや公共空間を舞台にしたフィジカルなゲームのアイデアをチームで出し、プロトタイプを作り、検証・発表までを行うワークショップです。',
     venue: venues.bridgestudio,
     designer: designers.playtest,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/joanna.webp',
     name: 'Warp and Weft',
-    description: `A collaborative and competitive game about connecting everything (literally) on the street in a way that is out of the ordinary. Within 60 seconds, each team has to create one closed shape with as many edges as possible, using any buildings, structures, objects, people... around them. 街角のあらゆるものを普通とは違う方法でつなげる、共同作業と競争ゲーム。各チームは60秒以内に、周囲の建物、構造物、物、人などのあらゆるものを使い、できるだけ多くの辺を持つ閉じた形を1つ作ります。
-    `,
+    description: `A collaborative and competitive game about connecting everything (literally) on the street in a way that is out of the ordinary. Within 60 seconds, each team has to create one closed shape with as many edges as possible, using any buildings, structures, objects, people, etc. around them.`,
+    descriptionJa:
+      '街角のあらゆるものを普通とは違う方法でつなげる、共同作業と競争ゲーム。各チームは60秒以内に、周囲の建物、構造物、物、人などのあらゆるものを使い、できるだけ多くの辺を持つ閉じた形を1つ作ります。',
     venue: venues.kyotouniversityofart,
     designer: designers.joanna,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/kaho.png',
     name: 'Touch',
-    description: `A playful, interactive room that creates opportunities for people to hold hands, and touch each other to create changes in sounds.誰かと手をつないだり、触れ合ったりすることで音の変化を生み出す、遊び心のあるインタラクティブなインスタレーションを、常設展示会場にて展示します。`,
+    description: `A playful, interactive room that creates opportunities for people to hold hands, and touch each other to create changes in sounds.`,
+    descriptionJa:
+      '誰かと手をつないだり、触れ合ったりすることで音の変化を生み出す、遊び心のあるインタラクティブなインスタレーションを、常設展示会場にて展示します。',
     venue: venues.fumoto,
     designer: designers.kaho,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/marcus.jpg',
     name: 'DIY Hanafuda Workshop',
-    description: `Make your own Hanafuda cards with a stencilling technique called kappazuri! 花札と言えば、今でこそ機械刷りのものが当たり前ですが、江戸時代から昭和初期にかけて京都では「合羽摺り」というステンシルを使った手摺りが一般的でした。戦後に姿を消したこの印刷方法は昭和50年代に一度復活されたものの、手摺りの花札を手に入れようと思えば、今日ではとても高価です。この手摺り花札を一緒に作り、みんなで遊んでみましょう。`,
+    description: `Make your own Hanafuda cards with a stencilling technique called kappazuri! `,
+    descriptionJa:
+      '花札と言えば、今でこそ機械刷りのものが当たり前ですが、江戸時代から昭和初期にかけて京都では「合羽摺り」というステンシルを使った手摺りが一般的でした。戦後に姿を消したこの印刷方法は昭和50年代に一度復活されたものの、手摺りの花札を手に入れようと思えば、今日ではとても高価です。この手摺り花札を一緒に作り、みんなで遊んでみましょう。',
     venue: venues.bridgestudio,
     designer: designers.marcus,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/tomo.png',
     name: 'Unmapping',
-    description: `Players are blindfolded and taken to a mystery location, their phones and wallets temporary sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to a predetermined spot.デジタル化が進んだ今、純粋に道に迷うことは珍しい。この都市型ゲームは、迷子になったときの興奮を追体験させてくれるものです。プレイヤーは目隠しをし、連れて行かれた場所で、自分の感覚だけを頼りに、手がかりを解き明かし、決められた場所への道を見つけなければなりません。この冒険では、テクノロジーへの依存を掘り下げ、都市探検と周囲とのつながりを取り戻すという新鮮な視点を提示します。
-    `,
+    description: `Players are blindfolded and taken to a mystery location, their phones and wallets temporary sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to a predetermined spot.`,
+    descriptionJa:
+      'デジタル化が進んだ今、純粋に道に迷うことは珍しい。この都市型ゲームは、迷子になったときの興奮を追体験させてくれるものです。プレイヤーは目隠しをし、連れて行かれた場所で、自分の感覚だけを頼りに、手がかりを解き明かし、決められた場所への道を見つけなければなりません。この冒険では、テクノロジーへの依存を掘り下げ、都市探検と周囲とのつながりを取り戻すという新鮮な視点を提示します。',
     venue: venues.cityhall,
     designer: designers.tomo,
+    ticketUrl: 'https://peatix.com/group/15427896/events',
   },
 ]

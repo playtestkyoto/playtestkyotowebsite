@@ -1,11 +1,22 @@
 <template>
   <div class="team">
-    <h2 class="marbotsmall textcenter">
+    <h2 class="marbotsmall bold textcenter">
       <span v-if="locale === 'ja'">Playtestのチーム</span>
       <span v-else>Playtest Team</span>
     </h2>
 
-    <div class="teamMembers flexcenter">
+    <div class="teamMembers">
+      <div class="mobileList nodesktop flexcolumn">
+        <component
+          :is="member.url ? 'a' : 'div'"
+          v-for="member in teamMembers"
+          :key="member.name"
+          :href="member.url"
+          target="_blank"
+        >
+          {{ member.name }}
+        </component>
+      </div>
       <component
         :is="member.url ? 'a' : 'div'"
         v-for="member in teamMembers"
@@ -17,7 +28,7 @@
           zIndex: member.z ? member.z : 1,
         }"
       >
-        <div class="padleft padright">
+        <div class="padleft padright nomobile">
           <h3 class="marnone">
             {{ member.name }}
           </h3>
@@ -66,17 +77,18 @@ const teamMembers: {
     image: '/images/people/jasper_trans.png',
   },
   {
-    name: 'William Zack Wood',
-    role: 'Planner',
-    url: 'http://wzackw.com/',
-    image: '/images/people/zack_trans.png',
-    imageHeightMod: 1.3,
-  },
-  {
     name: 'Chisato Tanaka',
     role: 'Planner',
     image: '/images/people/chisato_trans.png',
     imageHeightMod: 1,
+    z: 3,
+  },
+  {
+    name: 'William Zack Wood',
+    role: 'Planner',
+    url: 'http://wzackw.com/',
+    image: '/images/people/zack_trans.png',
+    imageHeightMod: 1.4,
   },
 ]
 </script>
@@ -85,6 +97,21 @@ const teamMembers: {
 .teamMembers {
   margin-bottom: -5em;
   mix-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: -2em;
+    padding-top: 6em;
+  }
+
+  .mobileList {
+    position: absolute;
+    left: 2em;
+    top: 6em;
+    z-index: 10;
+  }
 
   a {
     text-decoration: none;
@@ -101,6 +128,11 @@ const teamMembers: {
 
   h3 {
     line-height: 1.1;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 1rem;
+    }
   }
   .memberImage {
     padding-top: 1em;
@@ -110,6 +142,16 @@ const teamMembers: {
     img {
       height: 100%;
       max-width: 1000%;
+    }
+
+    @media (max-width: 768px) {
+      height: calc(15vw + 5em);
+      padding-top: 1em;
+      margin: 0 0;
+
+      img {
+        transform: translateX(-25%);
+      }
     }
   }
 }

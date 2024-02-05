@@ -14,13 +14,14 @@
           }"
         ></div>
       </div>
-      <div class="colorOverlay"></div>
       <!-- <div class="colorOverlay2"></div> -->
     </div>
 
+    <div class="colorOverlay"></div>
+
     <div class="heroContents">
       <div
-        class="vogueLazy abs z1 fullwidth fullheight nopointer"
+        class="vogueLazy abs z3 fullwidth fullheight nopointer"
       >
         <img
           src="/images/hero/particlesBehind.svg"
@@ -29,7 +30,7 @@
         />
       </div>
       <div
-        class="vogueLazy3 abs z1 fullwidth fullheight nopointer"
+        class="vogueLazy3 abs z3 fullwidth fullheight nopointer"
       >
         <img
           src="/images/hero/particlesBehind2.svg"
@@ -39,7 +40,7 @@
       </div>
 
       <div
-        class="vogueLazy2 abs z4 fullwidth fullheight nopointer"
+        class="vogueLazy2 abs z6 fullwidth fullheight nopointer"
       >
         <img
           src="/images/hero/particlesFront.svg"
@@ -51,17 +52,17 @@
       <img
         src="/images/hero/linesLR.svg"
         style="width: calc(100% - 2em); left: 1em"
-        class="abs absCenterY z1 mult"
+        class="abs absCenterY z3 mult"
       />
 
       <img
         src="/images/hero/linesTB.svg"
         style="height: calc(100% - 2em); top: 1em"
-        class="abs absCenterX z1 mult"
+        class="abs absCenterX z3 mult"
       />
 
       <div
-        class="fullwidth fullheight mult z1 flexcenter flexcolumn"
+        class="fullwidth fullheight mult z3 flexcenter flexcolumn"
       >
         <img
           src="/images/hero/leftIcons.svg"
@@ -70,7 +71,7 @@
             right: 2em;
             top: calc(50% - 15.5vw);
           "
-          class="abs absCenterY z1"
+          class="abs absCenterY z3 nomobile"
         />
 
         <div class="spinSlow abs fullwidth fullheight">
@@ -93,18 +94,17 @@
         />
 
         <img
-          class="dates z5 abs absCenter"
+          class="dates z6 abs absCenter nomobile"
           src="/images/hero/dateTimeOutlined.svg"
-          style="width: 20em; top: 10%"
+          style="width: calc(min(80vw, 20em)); top: 10%"
         />
 
         <img
           src="/images/logos/playtestOutlined.svg"
-          class="heroLogo z3 abs absCenter"
+          class="heroLogo z5 abs absCenter"
         />
         <div
-          class="z5 marqueeBox flexcolumn flexcenter abs absCenter"
-          style="top: 75%"
+          class="z6 marqueeBox flexcolumn flexcenter abs absCenter"
         >
           <div class="fullwidth nooverflow">
             <Marquee class="">
@@ -123,9 +123,9 @@
         </div>
       </div>
 
-      <div class="z5 abs absCenter" style="top: 87%">
+      <div class="z6 abs absCenter ticketButton">
         <a
-          href="#"
+          href="https://peatix.com/group/15427896/events"
           class="button big white insetLine"
           target="_blank"
           style="--insetOffset: 0.3em"
@@ -173,12 +173,19 @@ onMounted(() => {
   color: var(--bg);
   width: 100%;
   overflow: hidden;
+  background-color: var(--c1);
 
-  height: 90vh;
+  --height: 90vh;
+
+  height: var(--height);
+
+  @media (max-width: 768px) {
+    --height: 400px;
+  }
 }
 
 .fullheight {
-  height: 90vh;
+  height: var(--height);
 }
 
 .heroBg {
@@ -188,10 +195,9 @@ onMounted(() => {
   position: absolute !important;
   top: 0;
   left: 0;
-  z-index: 0;
+  z-index: 1;
   opacity: 1;
   // background-blend-mode: multiply;
-  background-color: var(--c1);
 
   .imageholder {
     width: 80%;
@@ -205,6 +211,11 @@ onMounted(() => {
     perspective: 100em;
     border-radius: 50%;
     overflow: hidden;
+
+    // @media (max-width: 768px) {
+    //   width: 110%;
+    //   height: 110%;
+    // }
 
     .image {
       background-size: cover;
@@ -270,6 +281,7 @@ onMounted(() => {
 }
 
 .colorOverlay {
+  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -283,17 +295,35 @@ onMounted(() => {
     #0002 50%,
     #000
   );
+
+  @media (max-width: 768px) {
+    mask: radial-gradient(
+      calc(min(40vw, var(--height) * 0.5)) at 50% 50%,
+      #0002 30%,
+      #0002 50%,
+      #000
+    );
+  }
 }
 
 .heroContents {
-  height: 90vh;
+  height: var(--height);
   width: 100%;
   position: absolute;
+
+  @media (max-width: 768px) {
+    width: 120%;
+    left: -10%;
+  }
 }
 
 .heroLogo {
   width: 100%;
-  max-width: calc(min(90vw, 90vh, 1600px));
+  max-width: calc(min(95vw, var(--height), 1600px));
+
+  @media (max-width: 768px) {
+    top: 45% !important;
+  }
 }
 
 .abs {
@@ -322,9 +352,9 @@ onMounted(() => {
 
 .marqueeBox {
   position: relative;
-  padding: 3px 0;
   width: 600px;
   max-width: 90vw;
+  top: 75% !important;
   // border-right: 2px solid var(--text);
   // border-left: 2px solid var(--text);
   color: var(--text);
@@ -348,13 +378,34 @@ onMounted(() => {
     left: 1px;
     transform: rotate(180deg);
   }
+
+  @media (max-width: 768px) {
+    top: 63% !important;
+    max-width: 80vw;
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    &:before,
+    &:after {
+      width: calc(35px * 0.75);
+      height: calc(68px * 0.75);
+    }
+  }
 }
 
-.button {
+.ticketButton {
+  white-space: nowrap;
   border-radius: 2em;
+  top: 89% !important;
 
   &:after {
     border-radius: 2em;
+  }
+
+  @media (max-width: 768px) {
+    top: 85% !important;
   }
 }
 </style>

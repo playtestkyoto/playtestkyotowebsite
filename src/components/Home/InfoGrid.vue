@@ -4,7 +4,9 @@
       <div v-if="locale === 'ja'">会期 📆</div>
       <div v-else><span class="todo"></span></div>
 
-      <div v-if="locale === 'ja'">2024年3月29日（金）〜31日（日）　計3日間</div>
+      <div v-if="locale === 'ja'">
+        2024年3月29日（金）〜31日（日）　計3日間
+      </div>
       <div v-else></div>
     </div>
 
@@ -29,7 +31,18 @@
       <div v-else></div>
 
       <div v-if="locale === 'ja'">
-        チケット予約はこちら: https://peatix.com/group/15427896/events
+        チケット予約は
+        <a
+          class="button c6 small insetLine"
+          href="https://peatix.com/group/15427896/events"
+          style="
+            --insetOffset: 4px;
+            --insetColor: white;
+            --insetWidth: 2px;
+          "
+          target="_blank"
+          >こちら</a
+        >
       </div>
       <div v-else></div>
     </div>
@@ -38,7 +51,9 @@
       <div v-if="locale === 'ja'">主宰 👨‍👩‍👧‍👦</div>
       <div v-else></div>
 
-      <div v-if="locale === 'ja'">Playtest 実行委員会（代表：杉田真理子）</div>
+      <div v-if="locale === 'ja'">
+        Playtest 実行委員会（代表：杉田真理子）
+      </div>
       <div v-else></div>
     </div>
 
@@ -47,20 +62,24 @@
       <div v-else></div>
 
       <div v-if="locale === 'ja'">
-        <a href="mailto:playtestkyoto@gmail.com">playtestkyoto@gmail.com</a>
+        <a href="mailto:playtestkyoto@gmail.com"
+          >playtestkyoto@gmail.com</a
+        >
       </div>
       <div v-else>
-        <a href="mailto:playtestkyoto@gmail.com">playtestkyoto@gmail.com</a>
+        <a href="mailto:playtestkyoto@gmail.com"
+          >playtestkyoto@gmail.com</a
+        >
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import * as c from "~/assets/common";
-import * as appState from "~/assets/state";
-const i18n = useI18n();
-const locale = computed(() => i18n.locale.value);
+import * as c from '~/assets/common'
+import * as appState from '~/assets/state'
+const i18n = useI18n()
+const locale = computed(() => i18n.locale.value)
 </script>
 
 <style lang="scss" scoped>
@@ -96,6 +115,17 @@ const locale = computed(() => i18n.locale.value);
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+
+    &:first-child {
+      & > div:first-child {
+        padding-top: 9em !important;
+      }
+    }
+    &:last-child {
+      & > div:last-child {
+        padding-bottom: 9em !important;
+      }
+    }
   }
 
   & > * {
@@ -111,6 +141,8 @@ const locale = computed(() => i18n.locale.value);
     @media (max-width: 768px) {
       text-align: left;
       border: none;
+      padding: 0.8em 1em;
+      padding-bottom: 0;
     }
   }
   & > div:nth-child(2) {
@@ -118,7 +150,7 @@ const locale = computed(() => i18n.locale.value);
     padding-right: 0;
 
     @media (max-width: 768px) {
-      padding: 0.5em;
+      padding: 0.8em 1em;
       padding-top: 0;
     }
   }

@@ -35,6 +35,11 @@
   --marSmall: 1em;
   --mar: 2em;
   --marBig: 4em;
+
+  @media (max-width: 768px) {
+    --mar: 1.5em;
+    --marBig: 2em;
+  }
 }
 
 *,
@@ -80,6 +85,11 @@ html {
   padding-left: 2em;
   padding-right: 2em;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 .textcolumn {
   width: 100%;
@@ -87,6 +97,24 @@ html {
   padding-left: 2em;
   padding-right: 2em;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+.nomobile,
+.noMobile {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+.nodesktop,
+.noDesktop {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
 }
 
 h1 {
@@ -378,7 +406,7 @@ a:hover,
       var(--insetColor, var(--text));
     z-index: 6;
 
-    mix-blend-mode: multiply;
+    // mix-blend-mode: multiply;
   }
 }
 
@@ -532,6 +560,10 @@ img {
 .z5 {
   position: relative;
   z-index: 5 !important;
+}
+.z6 {
+  position: relative;
+  z-index: 6 !important;
 }
 
 hr {
@@ -750,6 +782,10 @@ button,
     --buttonColor: var(--bg);
     --textColor: var(--text);
   }
+  &.black {
+    --buttonColor: var(--text);
+    --textColor: var(--bg);
+  }
 
   &.warning {
     --buttonColor: var(--warning);
@@ -763,7 +799,6 @@ button,
   cursor: pointer;
   outline: none;
   padding: 0.6em 1.5em;
-  border-radius: var(--borderRadius);
   font-size: 1em;
   line-height: 1.2;
   font-weight: 900 !important;
@@ -778,6 +813,12 @@ button,
   margin: 2px;
   margin-left: 0;
   margin-top: 0;
+
+  &,
+  &:before,
+  &:after {
+    border-radius: 2em;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -812,6 +853,11 @@ button,
     display: flex;
     width: 100%;
     padding: 1.5em 2em;
+
+    @media (max-width: 768px) {
+      font-size: 1.2em;
+      padding: 1.3em 1.5em;
+    }
   }
 
   &.small {
