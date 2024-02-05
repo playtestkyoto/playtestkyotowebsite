@@ -19,18 +19,14 @@
     </div>
 
     <div class="heroContents">
-      <div
-        class="vogueLazy abs z1 fullwidth fullheight nopointer"
-      >
+      <div class="vogueLazy abs z1 fullwidth fullheight nopointer">
         <img
           src="/images/hero/particlesBehind.svg"
           class="abs absCenterY"
           style="width: 110%; right: -5%"
         />
       </div>
-      <div
-        class="vogueLazy3 abs z1 fullwidth fullheight nopointer"
-      >
+      <div class="vogueLazy3 abs z1 fullwidth fullheight nopointer">
         <img
           src="/images/hero/particlesBehind2.svg"
           class="abs absCenterY"
@@ -38,9 +34,7 @@
         />
       </div>
 
-      <div
-        class="vogueLazy2 abs z4 fullwidth fullheight nopointer"
-      >
+      <div class="vogueLazy2 abs z4 fullwidth fullheight nopointer">
         <img
           src="/images/hero/particlesFront.svg"
           style="width: 60%; right: 15%; top: 45%"
@@ -60,16 +54,10 @@
         class="abs absCenterX z1 mult"
       />
 
-      <div
-        class="fullwidth fullheight mult z1 flexcenter flexcolumn"
-      >
+      <div class="fullwidth fullheight mult z1 flexcenter flexcolumn">
         <img
           src="/images/hero/leftIcons.svg"
-          style="
-            width: 2em;
-            right: 2em;
-            top: calc(50% - 15.5vw);
-          "
+          style="width: 2em; right: 2em; top: calc(50% - 15.5vw)"
           class="abs absCenterY z1"
         />
 
@@ -112,10 +100,7 @@
                 <span v-if="locale === 'ja'">
                   都市空間における”遊び”のフェスティバル
                 </span>
-                <span v-else
-                  >A Playground for Experimental Urban
-                  Games</span
-                >
+                <span v-else>A Playground for Experimental Urban Games</span>
                 &nbsp;&nbsp; ・ &nbsp;&nbsp;
               </h3>
             </Marquee>
@@ -130,7 +115,7 @@
           target="_blank"
           style="--insetOffset: 0.3em"
         >
-          <span v-if="locale === 'ja'">切符をゲット</span>
+          <span v-if="locale === 'ja'">チケット購入</span>
           <span v-else>Get Tickets</span>
         </a>
       </div>
@@ -139,31 +124,31 @@
 </template>
 
 <script setup lang="ts">
-import * as c from '~/assets/common'
-import * as appState from '~/assets/state'
-const i18n = useI18n()
-const locale = computed(() => i18n.locale.value)
+import * as c from "~/assets/common";
+import * as appState from "~/assets/state";
+const i18n = useI18n();
+const locale = computed(() => i18n.locale.value);
 
-const imageIndex = ref(1)
-const imageAnimating = ref(false)
+const imageIndex = ref(1);
+const imageAnimating = ref(false);
 
 onMounted(() => {
   // preload images
   for (let i = 1; i <= 4; i++) {
-    const img = new Image()
-    img.src = `/images/hero/${i}.jpg`
+    const img = new Image();
+    img.src = `/images/hero/${i}.jpg`;
   }
 
   setInterval(async () => {
-    imageAnimating.value = true
+    imageAnimating.value = true;
 
-    await c.sleep(300)
-    imageIndex.value = (imageIndex.value % 4) + 1
+    await c.sleep(300);
+    imageIndex.value = (imageIndex.value % 4) + 1;
 
-    await c.sleep(300)
-    imageAnimating.value = false
-  }, 7000)
-})
+    await c.sleep(300);
+    imageAnimating.value = false;
+  }, 7000);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -277,12 +262,7 @@ onMounted(() => {
   height: 100%;
   background: var(--c1);
 
-  mask: radial-gradient(
-    30vw at 50% 50%,
-    #0002 30%,
-    #0002 50%,
-    #000
-  );
+  mask: radial-gradient(30vw at 50% 50%, #0002 30%, #0002 50%, #000);
 }
 
 .heroContents {
@@ -336,10 +316,10 @@ onMounted(() => {
     position: absolute;
     z-index: 2;
     right: 1px;
-    background-image: url('/images/home/portalBlack.png');
+    background-image: url("/images/home/portalBlack.png");
     width: 35px;
     height: 68px;
-    content: '';
+    content: "";
     background-size: contain;
     background-repeat: no-repeat;
   }
