@@ -33,9 +33,7 @@
           <span class="hl1">Playtest Kyoto</span>は、<br />
           <span class="hl2">都市空間</span>を舞台とした
           <br />
-          <span class="hl3">ゲーム</span>や<span class="hl3"
-            >遊び</span
-          >を行う
+          <span class="hl3">ゲーム</span>や<span class="hl3">遊び</span>を行う
           <br />
           <span class="hl4">3日間のイベント</span>です。
         </h2>
@@ -56,8 +54,12 @@
         />
 
         <div>
-          「Urban Play
-          Festival」は、都市空間を舞台とした「ゲームと遊び」を行う3日間のフェスティバルです。京都に縁のあるゲームデザイナー、クリエイター、アーティスト数名をアサインし、京都の具体的な都市空間（広場や公園などの公共空間や、文化創造拠点や未活用の遊休不動産など）をお題に、市民誰でも参加可能なゲームを制作し、フェスティバル期間中に発表してもらいます。具体的には、街区全体を活用したトレジャーハンティングや、チームに分かれてミッションをクリアしていくストリート版借り物競争、アプリを活用した街中でのAR体験など、1人だけでなく複数人で遊べるゲームを想定しています。
+          2006年、ニューヨークで「Come Out &
+          Play」フェスティバルが開催され、ゲームデザイナーと市民が公共スペースに集まり、さまざまな遊びのアクティビティが行われました。その後15年間、ギリシャのPlaythonやポーランドのPlaypublikなど、遊び心のあるアートや公共空間での遊び、デジタルとアナログの垣根を越えたゲームに焦点を当てたフェスティバルが相次いでいます。これらのイベントは、都市空間・公共空間を活用した遊びを紹介し、広く人々が楽しむ機会を提供してきました。
+          <br />
+          <br />
+          Playtest Kyoto
+          は、都市空間を舞台としたゲームや遊びを行う3日間のイベントです。京都に縁のあるゲームデザイナー、クリエイター、アーティストと共に、京都市内の広場や公園などの公共空間や、文化創造拠点や未活用の遊休不動産などを舞台に、子供から高齢者まで誰でも参加可能なゲームを制作します。街区全体を活用したトレジャーハンティングや、チームに分かれてミッションをクリアしていくストリート版借り物競争、アプリを活用した街中でのAR体験など、デジタルからフィジカルまでを横断しながら、京都という街を捉え直し、遊び尽くす3日間です。
         </div>
       </div>
       <div v-else>
@@ -84,16 +86,25 @@
         />
 
         <div>
-          Together with game designers, creators, and
-          artists with ties to Kyoto, we will create games
-          that anyone from children to the elderly can
-          participate in, using spaces such as plazas and
-          parks, cultural and creative centers, and
-          underutilized real estate in Kyoto City as stages.
-          The three-day event will include
-          <span class="todo">X Y and Z</span>, traversing
-          the digital and physical worlds to play across the
-          city of Kyoto.
+          In 2006 the “Come Out & Play” festival was held in New York City,
+          bringing together game designers and residents of the city in public
+          spaces with a wide variety of playful activities. The next 15 years
+          saw a wave of festivals focused on playful art, play in public spaces,
+          and games across the digital-analog spectrum, such as Plaython in
+          Greece and Playpublik in Poland, fueled in part by the growing indie
+          game community. While diverse in theme and structure, these events
+          shared an embrace of playfulness as a key to engagement, connection,
+          and activation of the city―in a sense, they were simply gathering
+          points for people seeking fun, new experiences.
+          <br />
+          <br />
+          COVID-19 restrictions brought a sudden end to in-person festivals, but
+          in the last year they have finally begun to re-emerge. What would an
+          urban play festival in Kyoto look like? What fun, new experiences
+          could be found there? Join game designers, artists, and residents of
+          Kyoto on March 29th-31st as they answer these questions through
+          interactive installations, team-based games, and playful art tailored
+          to specific locations throughout the city.
         </div>
       </div>
     </div>
@@ -101,10 +112,10 @@
 </template>
 
 <script setup lang="ts">
-import * as c from '~/assets/common'
-import * as appState from '~/assets/state'
-const i18n = useI18n()
-const locale = computed(() => i18n.locale.value)
+import * as c from "~/assets/common";
+import * as appState from "~/assets/state";
+const i18n = useI18n();
+const locale = computed(() => i18n.locale.value);
 </script>
 
 <style lang="scss" scoped>

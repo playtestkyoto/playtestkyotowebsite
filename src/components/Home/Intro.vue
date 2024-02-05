@@ -130,7 +130,7 @@
           target="_blank"
           style="--insetOffset: 0.3em"
         >
-          <span v-if="locale === 'ja'">切符をゲット</span>
+          <span v-if="locale === 'ja'">チケット購入</span>
           <span v-else>Get Tickets</span>
         </a>
       </div>
