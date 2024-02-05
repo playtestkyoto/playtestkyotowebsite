@@ -2,33 +2,33 @@
   <div class="grid">
     <div class="row">
       <div v-if="locale === 'ja'">会期 📆</div>
-      <div v-else><span class="todo"></span></div>
+      <div v-else>Event Dates 📆</div>
 
       <div v-if="locale === 'ja'">
         2024年3月29日（金）〜31日（日）　計3日間
       </div>
-      <div v-else></div>
+      <div v-else>March 29th (Fri) — 31st (Sun), 2024</div>
     </div>
 
     <div class="row">
       <div v-if="locale === 'ja'">会場 🎪</div>
-      <div v-else></div>
+      <div v-else>Venue 🎪</div>
 
       <div v-if="locale === 'ja'">京都市内随所</div>
-      <div v-else></div>
+      <div v-else>Various locations in Kyoto</div>
     </div>
 
     <div class="row">
       <div v-if="locale === 'ja'">時間 ⏰</div>
-      <div v-else></div>
+      <div v-else>Time ⏰</div>
 
       <div v-if="locale === 'ja'">12:00 — 18:00</div>
-      <div v-else></div>
+      <div v-else>12:00 — 18:00</div>
     </div>
 
     <div class="row">
       <div v-if="locale === 'ja'">チケット 🎟️</div>
-      <div v-else></div>
+      <div v-else>Tickets 🎟️</div>
 
       <div v-if="locale === 'ja'">
         チケット予約は
@@ -44,22 +44,38 @@
           >こちら</a
         >
       </div>
-      <div v-else></div>
+      <div v-else>
+        Tickets are available
+        <a
+          class="button c6 small insetLine"
+          href="https://peatix.com/group/15427896/events"
+          style="
+            --insetOffset: 4px;
+            --insetColor: white;
+            --insetWidth: 2px;
+          "
+          target="_blank"
+          >here</a
+        >
+      </div>
     </div>
 
     <div class="row">
       <div v-if="locale === 'ja'">主宰 👨‍👩‍👧‍👦</div>
-      <div v-else></div>
+      <div v-else>Organizers 👨‍👩‍👧‍👦</div>
 
       <div v-if="locale === 'ja'">
         Playtest 実行委員会（代表：杉田真理子）
       </div>
-      <div v-else></div>
+      <div v-else>
+        Playtest Executive Committee (Representative: Mariko
+        Sugita)
+      </div>
     </div>
 
     <div class="row">
       <div v-if="locale === 'ja'">問い合わせ 💭</div>
-      <div v-else></div>
+      <div v-else>Inquiry 💭</div>
 
       <div v-if="locale === 'ja'">
         <a href="mailto:playtestkyoto@gmail.com"
@@ -105,6 +121,7 @@ const locale = computed(() => i18n.locale.value)
   &:first-child {
     & > div {
       padding-top: 10em;
+      white-space: nowrap;
     }
   }
   &:last-child {
