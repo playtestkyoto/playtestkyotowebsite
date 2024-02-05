@@ -278,7 +278,7 @@ onMounted(() => {
   background: var(--c1);
 
   mask: radial-gradient(
-    30vw at 50% 50%,
+    calc(min(30vw, 35vh)) at 50% 50%,
     #0002 30%,
     #0002 50%,
     #000
@@ -293,7 +293,7 @@ onMounted(() => {
 
 .heroLogo {
   width: 100%;
-  max-width: calc(min(90vw, 1600px));
+  max-width: calc(min(90vw, 90vh, 1600px));
 }
 
 .abs {

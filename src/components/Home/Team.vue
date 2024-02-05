@@ -6,9 +6,12 @@
     </h2>
 
     <div class="teamMembers flexcenter">
-      <div
+      <component
+        :is="member.url ? 'a' : 'div'"
         v-for="member in teamMembers"
         :key="member.name"
+        :href="member.url"
+        target="_blank"
         class="member flexcolumn flexbetween textcenter"
         :style="{
           zIndex: member.z ? member.z : 1,
@@ -29,7 +32,7 @@
             }"
           />
         </div>
-      </div>
+      </component>
     </div>
   </div>
 </template>
@@ -45,26 +48,35 @@ const teamMembers: {
   role: string
   image: string
   imageHeightMod?: number
+  url?: string
   z?: number
 }[] = [
   {
     name: 'Mariko Sugita',
     role: 'Director',
+    url: 'https://linktr.ee/MarikoSugita',
     image: '/images/people/mariko_trans.png',
     imageHeightMod: 1.2,
     z: 3,
   },
-
   {
     name: 'Jasper Stephenson',
     role: 'Generalist',
+    url: 'https://www.jasperstephenson.com/',
     image: '/images/people/jasper_trans.png',
   },
   {
     name: 'William Zack Wood',
     role: 'Planner',
+    url: 'http://wzackw.com/',
     image: '/images/people/zack_trans.png',
     imageHeightMod: 1.3,
+  },
+  {
+    name: 'Chisato Tanaka',
+    role: 'Planner',
+    image: '/images/people/chisato_trans.png',
+    imageHeightMod: 1,
   },
 ]
 </script>
@@ -73,6 +85,15 @@ const teamMembers: {
 .teamMembers {
   margin-bottom: -5em;
   mix-blend-mode: multiply;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   .member {
     width: 25%;
