@@ -123,6 +123,31 @@
         </div>
       </div>
 
+      <div
+        class="z6 abs absCenter socialButtons flex gapsmall"
+      >
+        <a
+          href="https://peatix.com/group/15427896/events"
+          class="button black"
+          target="_blank"
+        >
+          <img
+            src="/images/social/instagram.svg"
+            class="socialIcon"
+          />
+        </a>
+        <a
+          href="https://peatix.com/group/15427896/events"
+          class="button black"
+          target="_blank"
+        >
+          <img
+            src="/images/social/facebook.svg"
+            class="socialIcon"
+          />
+        </a>
+      </div>
+
       <div class="z6 abs absCenter ticketButton">
         <a
           href="https://peatix.com/group/15427896/events"
@@ -354,7 +379,7 @@ onMounted(() => {
   position: relative;
   width: 600px;
   max-width: 90vw;
-  top: 75% !important;
+  top: 73% !important;
   // border-right: 2px solid var(--text);
   // border-left: 2px solid var(--text);
   color: var(--text);
@@ -395,6 +420,23 @@ onMounted(() => {
   }
 }
 
+.socialButtons {
+  top: 80% !important;
+
+  .button {
+    padding: 1em;
+  }
+
+  @media (max-width: 768px) or (max-height: 1200px) {
+    top: 0.6em !important;
+    left: calc(10% + 1em) !important;
+    transform: none !important;
+
+    .button {
+      padding: 0.7em;
+    }
+  }
+}
 .ticketButton {
   white-space: nowrap;
   border-radius: 2em;

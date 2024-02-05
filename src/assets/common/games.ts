@@ -103,7 +103,11 @@ export const games: Game[] = [
   {
     image: '/images/games/jam.jpg',
     name: 'Physical Game Jam',
-    description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest physical games over the course of a day. `,
+    description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest spatial games over the course of a day. All skill levels are welcome!`,
+    /*
+      Let's design physical games! A guided workshop to ideate, prototype, and playtest spatial games over the course of a day. All are welcome, whether you're a game designer or you haven't played physical games since you were a child. Come empy-handed — we'll supply the materials and the prompts. Several pro game designers will be in attendance to help guide the process.
+
+    */
     descriptionJa:
       'Playtest運営チームによる、1日で新しいゲームのプロトタイプを作るGame Jamを開催。街なかや公共空間を舞台にしたフィジカルなゲームのアイデアをチームで出し、プロトタイプを作り、検証・発表までを行うワークショップです。',
     venue: venues.bridgestudio,

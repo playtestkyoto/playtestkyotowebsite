@@ -63,6 +63,13 @@ const teamMembers: {
   z?: number
 }[] = [
   {
+    name: 'William Zack Wood',
+    role: 'Planner',
+    url: 'http://wzackw.com/',
+    image: '/images/people/zack_trans.png',
+    imageHeightMod: 1.4,
+  },
+  {
     name: 'Mariko Sugita',
     role: 'Director',
     url: 'https://linktr.ee/MarikoSugita',
@@ -82,13 +89,6 @@ const teamMembers: {
     image: '/images/people/chisato_trans.png',
     imageHeightMod: 1,
     z: 3,
-  },
-  {
-    name: 'William Zack Wood',
-    role: 'Planner',
-    url: 'http://wzackw.com/',
-    image: '/images/people/zack_trans.png',
-    imageHeightMod: 1.4,
   },
 ]
 </script>

@@ -18,6 +18,7 @@
   --c1: #ed6a3c; //#ff5f28;
   --c1Text: var(--bg);
   --c2: #fdf652; //#fff500;
+  --c2l: rgb(255, 255, 140);
   --c2Text: var(--text);
   --c3: #71ed5b; //#1ef03c;
   --c3Text: var(--text);
@@ -244,6 +245,10 @@ a:hover,
   color: var(--bg);
 }
 
+.bg {
+  background: var(--bg);
+  color: var(--text);
+}
 .bgd1,
 .bgd {
   background: var(--bg-d);

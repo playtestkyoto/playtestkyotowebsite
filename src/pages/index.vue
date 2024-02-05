@@ -85,7 +85,7 @@
       <div
         class="contentcolumn padtopbig padbotbig marbotbig"
       >
-        <HomeGames class="padbotbig" />
+        <HomeGames class="" />
       </div>
     </div>
 
@@ -97,8 +97,16 @@
       </div>
     </div> -->
 
-    <div class="bg3 z1">
-      <div class="contentcolumn padtopbig">
+    <div class="z1 wavyMask bg">
+      <div
+        class="contentcolumn padtopbig padbotbig marbotbig"
+      >
+        <HomeCalendar class="z3" />
+      </div>
+    </div>
+
+    <div class="bg3 z1 wavyMask2">
+      <div class="contentcolumn padtop">
         <HomeTeam />
       </div>
     </div>
