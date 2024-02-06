@@ -22,7 +22,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            '都市空間を舞台としたゲームや遊びを行う3日間のイベント',
+            '都市空間を舞台としたゲームや遊びを行う3日間のイベント。 A three-day event for games and play in urban spaces.',
         },
         {
           hid: 'og:title',
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
           hid: 'og:description',
           property: 'og:description',
           content:
-            '都市空間を舞台としたゲームや遊びを行う3日間のイベント',
+            '都市空間を舞台としたゲームや遊びを行う3日間のイベント。 A three-day event for games and play in urban spaces.',
         },
         {
           hid: 'og:image',
