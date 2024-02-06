@@ -9,6 +9,53 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   css: ['~/assets/css/main.scss'],
+  app: {
+    head: {
+      title: 'Playtest Kyoto 2024',
+      meta: [
+        { charset: 'utf-8' },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '都市空間を舞台としたゲームや遊びを行う3日間のイベント',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Playtest Kyoto 2024',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            '都市空間を舞台としたゲームや遊びを行う3日間のイベント',
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content:
+            'https://playtestkyoto.com/playtest_social.jpg',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://playtestkyoto.com/',
+        },
+      ],
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+      ],
+    },
+  },
   modules: [
     [
       '@nuxtjs/i18n',
