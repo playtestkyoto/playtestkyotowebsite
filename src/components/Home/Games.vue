@@ -64,7 +64,7 @@
               <a
                 class="button black insetLine"
                 :class="{
-                  nopointer:
+                  displaynone:
                     game.ticketUrl === 'coming soon',
                 }"
                 style="
