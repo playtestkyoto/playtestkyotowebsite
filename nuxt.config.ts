@@ -39,12 +39,12 @@ export default defineNuxtConfig({
           hid: 'og:image',
           property: 'og:image',
           content:
-            'https://playtestkyoto.com/playtest_social.jpg',
+            'https://playtest.city/playtest_social.jpg',
         },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://playtestkyoto.com/',
+          content: 'https://playtest.city/',
         },
       ],
       link: [
