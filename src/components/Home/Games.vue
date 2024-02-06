@@ -60,7 +60,7 @@
               }"
               class="image"
             />
-            <div class="ticketLink">
+            <div class="ticketLink" v-if="game.ticketUrl">
               <a
                 class="button black insetLine"
                 style="
@@ -68,7 +68,7 @@
                   --insetColor: white;
                   --insetWidth: 2px;
                 "
-                href="#"
+                :href="game.ticketUrl"
               >
                 <span class="padtiny">
                   <span v-if="locale === 'ja'"
@@ -78,6 +78,18 @@
                   👈
                 </span>
               </a>
+            </div>
+            <div class="ticketLink" v-else>
+              <div class="button nopointer black">
+                <span class="padtiny">
+                  <span v-if="locale === 'ja'"
+                    >他のチケットに含まれる</span
+                  >
+                  <span v-else
+                    >Included with other tickets!</span
+                  >
+                </span>
+              </div>
             </div>
 
             <div class="body padbot">
@@ -97,6 +109,9 @@
 
           <div
             class="location"
+            :class="{
+              nopointer: !game.venue.mapUrl,
+            }"
             v-if="game.venue"
             :key="game.venue.name"
             :style="{
@@ -113,7 +128,7 @@
               📍 {{ game.venue.name }}
             </div>
 
-            <div class="links">
+            <div class="links" v-if="game.venue.mapUrl">
               <a
                 :href="game.venue.url || '#'"
                 target="_blank"
@@ -361,7 +376,7 @@ const shuffledGames = c.shuffleArray(c.games)
       }
     }
 
-    &:hover {
+    &:not(.nopointer):hover {
       .locationBg {
         // background-color: rgba(0, 0, 0, 0.4);
         transform: scale(1.02);
@@ -382,18 +397,20 @@ const shuffledGames = c.shuffleArray(c.games)
     }
 
     @media (max-width: 768px) {
-      .locationBg {
-        // background-color: rgba(0, 0, 0, 0.4);
-        transform: scale(1.02);
-        filter: blur(2px);
-      }
+      &:not(.nopointer) {
+        .locationBg {
+          // background-color: rgba(0, 0, 0, 0.4);
+          transform: scale(1.02);
+          filter: blur(2px);
+        }
 
-      .locationBubble {
-        transform: translate(-50%, -80%);
+        .locationBubble {
+          transform: translate(-50%, -80%);
 
-        // &:after {
-        //   opacity: 0;
-        // }
+          // &:after {
+          //   opacity: 0;
+          // }
+        }
       }
 
       .links {

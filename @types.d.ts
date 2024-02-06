@@ -7,6 +7,7 @@ interface PageViewEventData {
 
 interface Venue {
   name: string
+  nameJa: string
   url?: string
   image?: string
   mapUrl?: string
@@ -27,5 +28,5 @@ interface Game {
   descriptionJa: string
   venue: Venue
   designer?: Designer
-  ticketUrl: string
+  ticketUrl?: string
 }

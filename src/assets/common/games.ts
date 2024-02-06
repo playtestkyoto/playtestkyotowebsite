@@ -1,34 +1,53 @@
 export const venues: { [key: string]: Venue } = {
   bridgestudio: {
     name: 'Bridge Studio',
+    nameJa: 'Bridge Studio',
     url: 'https://brdg.to',
     image: '/images/venues/bridgestudio.jpg',
     mapUrl: 'https://maps.app.goo.gl/HKAymLAYDWVGrjgX7',
     color: 'var(--c1)',
   },
-  kyotouniversityofart: {
-    name: 'Kyoto Univ. of the Arts',
-    url: 'https://www.kyoto-art.ac.jp/en/',
-    image: '/images/venues/kyotouniversityofart.jpg',
-    mapUrl: 'https://maps.app.goo.gl/z9LNHKRa1hVwRaG86',
+  various: {
+    name: 'Various Kyoto Spots',
+    nameJa: '京都市各所',
     color: 'var(--c6)',
+    image: '/images/hero/4.jpg',
   },
+  // kyotouniversityofart: {
+  //   name: 'Kyoto Univ. of the Arts',
+  //   nameJa: '京都市立芸術大学',
+  //   url: 'https://www.kyoto-art.ac.jp/en/',
+  //   image: '/images/venues/kyotouniversityofart.jpg',
+  //   mapUrl: 'https://maps.app.goo.gl/z9LNHKRa1hVwRaG86',
+  //   color: 'var(--c6)',
+  // },
   cityhall: {
     name: 'Kyoto City Hall',
+    nameJa: '京都市役所',
     url: 'https://www.city.kyoto.lg.jp/',
     image: '/images/venues/cityhall.jpg',
     mapUrl: 'https://maps.app.goo.gl/j7SiYnHtWerLwMDx6',
     color: 'var(--c3)',
   },
-  handsawpress: {
-    name: 'Hand Saw Press',
-    url: 'https://handsawpresstokyo.com/workshop.html',
+  hohohoza: {
+    name: 'Hohohoza',
+    nameJa: 'ホホホ座',
+    url: 'http://hohohoza.com/',
     image: '/images/venues/handsawpress.jpg',
-    mapUrl: 'https://maps.app.goo.gl/UdEG2wZhh5gbhLK67',
+    mapUrl: 'https://maps.app.goo.gl/DJucGziifENMqoKV9',
     color: 'var(--c4)',
   },
+  // handsawpress: {
+  //   name: 'Hand Saw Press',
+  //   nameJa: 'Hand Saw Press',
+  //   url: 'https://handsawpresstokyo.com/workshop.html',
+  //   image: '/images/venues/handsawpress.jpg',
+  //   mapUrl: 'https://maps.app.goo.gl/UdEG2wZhh5gbhLK67',
+  //   color: 'var(--c4)',
+  // },
   fumoto: {
     name: 'Fumoto',
+    nameJa: '麓',
     url: 'https://jodojiza.com/',
     image: '/images/venues/fumoto.png',
     mapUrl: 'https://maps.app.goo.gl/Cz8kPQEUizcBqJG3A',
@@ -120,9 +139,9 @@ export const games: Game[] = [
     description: `A collaborative and competitive game about connecting everything (literally) on the street in a way that is out of the ordinary. Within 60 seconds, each team has to create one closed shape with as many edges as possible, using any buildings, structures, objects, people, etc. around them.`,
     descriptionJa:
       '街角のあらゆるものを普通とは違う方法でつなげる、共同作業と競争ゲーム。各チームは60秒以内に、周囲の建物、構造物、物、人などのあらゆるものを使い、できるだけ多くの辺を持つ閉じた形を1つ作ります。',
-    venue: venues.kyotouniversityofart,
+    venue: venues.various,
     designer: designers.joanna,
-    ticketUrl: 'https://peatix.com/group/15427896/events',
+    // ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/kaho.png',
@@ -130,9 +149,9 @@ export const games: Game[] = [
     description: `A playful, interactive room that creates opportunities for people to hold hands, and touch each other to create changes in sounds.`,
     descriptionJa:
       '誰かと手をつないだり、触れ合ったりすることで音の変化を生み出す、遊び心のあるインタラクティブなインスタレーションを、常設展示会場にて展示します。',
-    venue: venues.fumoto,
+    venue: venues.bridgestudio,
     designer: designers.kaho,
-    ticketUrl: 'https://peatix.com/group/15427896/events',
+    // ticketUrl: 'https://peatix.com/group/15427896/events',
   },
   {
     image: '/images/games/marcus.jpg',
@@ -140,7 +159,7 @@ export const games: Game[] = [
     description: `Make your own Hanafuda cards with a stencilling technique called kappazuri! `,
     descriptionJa:
       '花札と言えば、今でこそ機械刷りのものが当たり前ですが、江戸時代から昭和初期にかけて京都では「合羽摺り」というステンシルを使った手摺りが一般的でした。戦後に姿を消したこの印刷方法は昭和50年代に一度復活されたものの、手摺りの花札を手に入れようと思えば、今日ではとても高価です。この手摺り花札を一緒に作り、みんなで遊んでみましょう。',
-    venue: venues.bridgestudio,
+    venue: venues.hohohoza,
     designer: designers.marcus,
     ticketUrl: 'https://peatix.com/group/15427896/events',
   },

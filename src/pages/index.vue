@@ -81,7 +81,12 @@
       </div>
     </div> -->
 
-    <div class="padtopbig bgd">
+    <div
+      class="padtopbig bgd"
+      style="
+        box-shadow: inset 0 0 12em 0 rgba(0, 0, 0, 0.1);
+      "
+    >
       <div
         class="contentcolumn padtopbig padbotbig marbotbig"
       >
