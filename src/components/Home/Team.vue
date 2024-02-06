@@ -6,7 +6,9 @@
     </h2>
 
     <div class="teamMembers">
-      <div class="mobileList nodesktop flexcolumn">
+      <div
+        class="mobileList nodesktop flexcenter flexcolumn"
+      >
         <component
           :is="member.url ? 'a' : 'div'"
           v-for="member in teamMembers"
@@ -63,13 +65,6 @@ const teamMembers: {
   z?: number
 }[] = [
   {
-    name: 'William Zack Wood',
-    role: 'Planner',
-    url: 'http://wzackw.com/',
-    image: '/images/people/zack_trans.png',
-    imageHeightMod: 1.4,
-  },
-  {
     name: 'Mariko Sugita',
     role: 'Director',
     url: 'https://linktr.ee/MarikoSugita',
@@ -82,6 +77,13 @@ const teamMembers: {
     role: 'Generalist',
     url: 'https://www.jasperstephenson.com/',
     image: '/images/people/jasper_trans.png',
+  },
+  {
+    name: 'William Zack Wood',
+    role: 'Planner',
+    url: 'http://wzackw.com/',
+    image: '/images/people/zack_trans.png',
+    imageHeightMod: 1.4,
   },
   {
     name: 'Chisato Tanaka',
@@ -108,8 +110,8 @@ const teamMembers: {
 
   .mobileList {
     position: absolute;
-    left: 2em;
-    top: 6em;
+    width: 100%;
+    top: 7.5em;
     z-index: 10;
   }
 

@@ -8,10 +8,16 @@
         </div>
 
         <div class="bold">デザイン</div>
-        <div>綱島卓也</div>
+        <div>綱島卓也, Jasper Stephenson</div>
 
         <div class="bold">助成</div>
-        <div>Arts Aid Kyoto</div>
+        <div class="flexverticalcenter">
+          <img
+            src="/images/AAK.jpg"
+            style="height: 4em; margin-left: -1em"
+          />
+          Arts Aid Kyoto
+        </div>
 
         <div class="bold">お問合せ</div>
         <div>playtestkyoto@gmail.com</div>
@@ -25,11 +31,17 @@
           (Representative: Mariko Sugita)
         </div>
 
-        <div class="bold">Creative Design</div>
-        <div>Takuya Tsunashima</div>
+        <div class="bold">Design</div>
+        <div>Takuya Tsunashima, Jasper Stephenson</div>
 
         <div class="bold">Supported by</div>
-        <div>Arts Aid Kyoto</div>
+        <div class="flexverticalcenter">
+          <img
+            src="/images/AAK.jpg"
+            style="height: 4em; margin-left: -1em"
+          />
+          Arts Aid Kyoto
+        </div>
 
         <div class="bold">Inquiry</div>
         <div>

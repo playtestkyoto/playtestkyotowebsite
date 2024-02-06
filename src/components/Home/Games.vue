@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h2 class="marbot textcenter bold">
-      <span v-if="locale === 'ja'">ゲーム</span>
-      <span v-else>The Games</span>
+    <h2 class="marbotsmall textcenter bold">
+      <span v-if="locale === 'ja'">Games</span>
+      <span v-else>Games</span>
     </h2>
 
     <div class="games">
@@ -63,6 +63,10 @@
             <div class="ticketLink" v-if="game.ticketUrl">
               <a
                 class="button black insetLine"
+                :class="{
+                  nopointer:
+                    game.ticketUrl === 'coming soon',
+                }"
                 style="
                   --insetOffset: 3px;
                   --insetColor: white;
@@ -71,11 +75,14 @@
                 :href="game.ticketUrl"
               >
                 <span class="padtiny">
-                  <span v-if="locale === 'ja'"
-                    >チケット購入</span
+                  <span
+                    v-if="game.ticketUrl === 'coming soon'"
+                    >Coming Soon!</span
                   >
-                  <span v-else>Get Tickets</span>
-                  👈
+                  <span v-else-if="locale === 'ja'"
+                    >チケット予約 👈</span
+                  >
+                  <span v-else>Get Tickets 👈</span>
                 </span>
               </a>
             </div>

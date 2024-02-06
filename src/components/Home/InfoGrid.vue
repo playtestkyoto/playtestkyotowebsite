@@ -74,6 +74,14 @@
     </div>
 
     <div class="row">
+      <div v-if="locale === 'ja'">助成 🚁</div>
+      <div v-else>Supported by 🚁</div>
+
+      <div v-if="locale === 'ja'">Arts Aid Kyoto</div>
+      <div v-else>Arts Aid Kyoto</div>
+    </div>
+
+    <div class="row">
       <div v-if="locale === 'ja'">問い合わせ 💭</div>
       <div v-else>Inquiry 💭</div>
 

@@ -127,7 +127,7 @@
         class="z6 abs absCenter socialButtons flex gapsmall"
       >
         <a
-          href="https://peatix.com/group/15427896/events"
+          href="https://www.instagram.com/playtestkyoto/"
           class="button black"
           target="_blank"
         >
@@ -137,7 +137,7 @@
           />
         </a>
         <a
-          href="https://peatix.com/group/15427896/events"
+          href="https://www.facebook.com/profile.php?id=61553576586398"
           class="button black"
           target="_blank"
         >
