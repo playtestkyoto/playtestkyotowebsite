@@ -123,32 +123,24 @@
         </div>
       </div>
 
-      <div
-        class="z6 abs absCenter socialButtons flex gapsmall"
-      >
+      <div class="z6 socialButtons flex gapsmall">
         <a
           href="https://www.instagram.com/playtestkyoto/"
           class="button black"
           target="_blank"
         >
-          <img
-            src="/images/social/instagram.svg"
-            class="socialIcon"
-          />
+          <img src="/images/sc/i.svg" class="scI" />
         </a>
         <a
           href="https://www.facebook.com/profile.php?id=61553576586398"
           class="button black"
           target="_blank"
         >
-          <img
-            src="/images/social/facebook.svg"
-            class="socialIcon"
-          />
+          <img src="/images/sc/f.svg" class="scI" />
         </a>
       </div>
 
-      <div class="z6 abs absCenter ticketButton">
+      <div class="z6 ticketButton">
         <a
           href="https://peatix.com/group/15427896/events"
           class="button big white insetLine"
@@ -405,7 +397,7 @@ onMounted(() => {
   }
 
   @media (max-width: 768px) {
-    top: 63% !important;
+    top: 65% !important;
     max-width: 80vw;
 
     h3 {
@@ -421,33 +413,40 @@ onMounted(() => {
 }
 
 .socialButtons {
-  top: 80% !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 80%;
 
   .button {
     padding: 1em;
   }
 
   @media (max-width: 768px) or (max-height: 1200px) {
-    top: 0.6em !important;
-    left: calc(10% + 1em) !important;
-    transform: none !important;
+    top: 0.6em;
+    left: calc(10% + 1em);
+    transform: none;
 
     .button {
       padding: 0.7em;
     }
   }
 }
+
 .ticketButton {
   white-space: nowrap;
   border-radius: 2em;
-  top: 89% !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 89%;
 
   &:after {
     border-radius: 2em;
   }
 
   @media (max-width: 768px) {
-    top: 85% !important;
+    top: 85%;
   }
 }
 </style>
