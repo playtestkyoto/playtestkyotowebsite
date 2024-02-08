@@ -166,9 +166,9 @@ export const games: Game[] = [
   {
     image: '/images/games/tomo.png',
     name: 'Unmapping',
-    description: `Players are blindfolded and taken to a mystery location, their phones and wallets temporary sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to a predetermined spot.`,
+    description: `In this game, players are blindfolded and taken to a mystery location by car, their phones and wallets temporarily sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to the goal. As more people rely entirely on their smartphones for getting directions, we will explore our relationship with cities through the experience of literally getting lost.`,
     descriptionJa:
-      'デジタル化が進んだ今、純粋に道に迷うことは珍しい。この都市型ゲームは、迷子になったときの興奮を追体験させてくれるものです。プレイヤーは目隠しをし、連れて行かれた場所で、自分の感覚だけを頼りに、手がかりを解き明かし、決められた場所への道を見つけなければなりません。この冒険では、テクノロジーへの依存を掘り下げ、都市探検と周囲とのつながりを取り戻すという新鮮な視点を提示します。',
+      'このゲームではプレイヤー達は目隠しをされ、謎の場所へ車で連れて行かれます。参加者の携帯電話と財布は一時的に封筒に封印されているため、自分の感覚だけを頼りに手がかりを解き明かして、ゴールへ辿り着かなければいけません。道案内をスマートフォンに頼り切る人たちが増えたいま、「迷う」ことを通して私たちと都市の関係を考えていきます。',
     venue: venues.cityhall,
     designer: designers.tomo,
     ticketUrl: 'coming soon',
