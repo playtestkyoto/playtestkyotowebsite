@@ -78,7 +78,7 @@ export const designers: { [key: string]: Designer } = {
   joanna: {
     name: 'Joanna Lyu',
     bio: 'Joanna is a creative technologist and multimedia artist with a background in game design. Her practice spans across interactive virtual environments/CGI, audiovisual live performances and installations. She is interested in making interactive works which invite the public to explore the connections between humans, public spaces, and profound societal questions.',
-    image: '/images/people/joanna.jpg',
+    image: '/images/people/joanna.webp',
     url: 'https://joannalyu.com/',
   },
   kaho: {
