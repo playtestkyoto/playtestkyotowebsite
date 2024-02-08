@@ -70,7 +70,7 @@ export const designers: { [key: string]: Designer } = {
   // url: 'https://www.jasperstephenson.com/',
 
   zack: {
-    name: 'William Zack Wood',
+    name: 'Zack Wood',
     bio: 'Zack has held workshops and shown his work throughout events in Europe and is currently enrolled in a PhD program at Kyoto Seika University. He has been developing an original deck of oracle cards since mid-2020, which uses characters from his video game Monster Garden (available in English and Japanese). His readings build on his experiences with game design, game facilitation, and performance since 2014.',
     image: '/images/people/zack.webp',
     url: 'http://wzackw.com/',
