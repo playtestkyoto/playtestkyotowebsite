@@ -142,7 +142,7 @@
 
       <div class="z6 ticketButton">
         <a
-          href="https://peatix.com/group/15427896/events"
+          href="https://peatix.com/event/3849195/view"
           class="button big white insetLine"
           target="_blank"
           style="--insetOffset: 0.3em"

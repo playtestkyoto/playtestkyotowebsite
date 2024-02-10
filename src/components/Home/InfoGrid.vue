@@ -34,7 +34,7 @@
         チケット予約は
         <a
           class="button c6 small insetLine"
-          href="https://peatix.com/group/15427896/events"
+          href="https://peatix.com/event/3849195/view"
           style="
             --insetOffset: 4px;
             --insetColor: white;
@@ -48,7 +48,7 @@
         Tickets are available
         <a
           class="button c6 small insetLine"
-          href="https://peatix.com/group/15427896/events"
+          href="https://peatix.com/event/3849195/view"
           style="
             --insetOffset: 4px;
             --insetColor: white;
