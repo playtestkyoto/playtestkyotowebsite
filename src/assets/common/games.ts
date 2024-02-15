@@ -169,7 +169,7 @@ export const games: Game[] = [
     description: `In this game, players are blindfolded and taken to a mystery location by car, their phones and wallets temporarily sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to the goal. As more people rely entirely on their smartphones for getting directions, we will explore our relationship with cities through the experience of literally getting lost.`,
     descriptionJa:
       'このゲームではプレイヤー達は目隠しをされ、謎の場所へ車で連れて行かれます。参加者の携帯電話と財布は一時的に封筒に封印されているため、自分の感覚だけを頼りに手がかりを解き明かして、ゴールへ辿り着かなければいけません。道案内をスマートフォンに頼り切る人たちが増えたいま、「迷う」ことを通して私たちと都市の関係を考えていきます。',
-    venue: venues.cityhall,
+    venue: venues.various,
     designer: designers.tomo,
     ticketUrl: 'coming soon',
   },
