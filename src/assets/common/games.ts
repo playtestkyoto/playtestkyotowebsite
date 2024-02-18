@@ -114,7 +114,7 @@ export const games: Game[] = [
     description:
       'A series of simple games taken from improv theater and dance-movement practices for connection, creativity and fun! Afterwards, we will create small zines to reflect on the experience.',
     descriptionJa:
-      'アーティスト・William Zack Woodによる、即興演劇やダンス・ムーブメントの実践から学んだシンプルなゲーム。ゲーム終了後は、体験を振り返るために小冊子を作ります。',
+      'アーティスト・Zack Woodによる、即興演劇やダンス・ムーブメントの実践から学んだシンプルなゲーム。ゲーム終了後は、体験を振り返るために小冊子を作ります。',
     venue: venues.bridgestudio,
     designer: designers.zack,
     ticketUrl: 'coming soon',

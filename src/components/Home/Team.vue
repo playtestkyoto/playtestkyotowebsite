@@ -79,7 +79,7 @@ const teamMembers: {
     image: '/images/people/jasper_trans.png',
   },
   {
-    name: 'William Zack Wood',
+    name: 'Zack Wood',
     role: 'Planner',
     url: 'http://wzackw.com/',
     image: '/images/people/zack_trans.png',
