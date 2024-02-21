@@ -131,6 +131,7 @@ export const games: Game[] = [
       'Playtest運営チームによる、1日で新しいゲームのプロトタイプを作るGame Jamを開催。街なかや公共空間を舞台にしたフィジカルなゲームのアイデアをチームで出し、プロトタイプを作り、検証・発表までを行うワークショップです。',
     venue: venues.bridgestudio,
     designer: designers.playtest,
+    ticketUrl: 'coming soon',
     // ticketUrl: 'https://peatix.com/event/3849195/view',
   },
   {
