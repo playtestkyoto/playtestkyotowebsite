@@ -105,6 +105,14 @@ export const designers: { [key: string]: Designer } = {
     image: '/images/people/playtest.jpg',
     url: 'https://playtest.city/',
   },
+  farfama: {
+    name: 'Farfama',
+    image: '/images/people/farfama.webp',
+  },
+  space: {
+    name: `501`,
+    image: '/images/people/501.webp',
+  },
 }
 
 export const games: Game[] = [
@@ -172,6 +180,26 @@ export const games: Game[] = [
       'このゲームではプレイヤー達は目隠しをされ、謎の場所へ車で連れて行かれます。参加者の携帯電話と財布は一時的に封筒に封印されているため、自分の感覚だけを頼りに手がかりを解き明かして、ゴールへ辿り着かなければいけません。道案内をスマートフォンに頼り切る人たちが増えたいま、「迷う」ことを通して私たちと都市の関係を考えていきます。',
     venue: venues.various,
     designer: designers.tomo,
+    ticketUrl: 'coming soon',
+  },
+  {
+    image: '/images/games/farfama.webp',
+    name: 'Urban Lens',
+    description: `Capture the textures, materials, and patterns of Kyoto — we'll notice the details of the city to create clothing patterns for characters.`,
+    descriptionJa:
+      'スマホを使って京都の質感、素材、模様を撮影する遊び。街のディテールをキャプチャする「Urban Lens」を使って、デジタルシティの登場人物たちの、服のパターンを作ってみよう。',
+    venue: venues.bridgestudio,
+    designer: designers.farfama,
+    ticketUrl: 'coming soon',
+  },
+  {
+    image: '/images/games/space.webp',
+    name: 'Space Ambassador',
+    description:
+      'A game in which you guide aliens through the Jodoji Temple in Kyoto, Japan. Teams will work together with officials from the Space Embassy to create a terrestrial picture from a code.',
+    descriptionJa: `京都の浄土寺を、宇宙人に向けてガイドするゲーム。宇宙大使館の役人と共に、チームで暗号から地上絵を作ります。`,
+    venue: venues.bridgestudio,
+    designer: designers.space,
     ticketUrl: 'coming soon',
   },
 ]

@@ -48,18 +48,20 @@
               </div>
             </a>
 
-            <img
-              v-if="game.image"
-              :src="game.image"
-              :key="game.image"
-              :style="{
-                transform: `rotate(${c.randomBetween(
-                  -3,
-                  3,
-                )}deg)`,
-              }"
-              class="image"
-            />
+            <div class="imageholder">
+              <img
+                v-if="game.image"
+                :src="game.image"
+                :key="game.image"
+                :style="{
+                  transform: `rotate(${c.randomBetween(
+                    -3,
+                    3,
+                  )}deg)`,
+                }"
+                class="image"
+              />
+            </div>
             <div class="ticketLink" v-if="game.ticketUrl">
               <a
                 class="button black insetLine"
@@ -224,6 +226,9 @@ const shuffledGames = c.shuffleArray(c.games)
     line-height: 1.2;
   }
 
+  .imageholder {
+    filter: drop-shadow(0 0 0.2em rgba(0, 0, 0, 0.1));
+  }
   .image {
     margin: 1em 0;
     clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 95%);
