@@ -140,7 +140,7 @@
         </a>
       </div>
 
-      <div class="z6 ticketButton">
+      <!-- <div class="z6 ticketButton">
         <a
           href="https://peatix.com/event/3849195/view"
           class="button big white insetLine"
@@ -152,7 +152,7 @@
           >
           <span v-else>Get Tickets</span>
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

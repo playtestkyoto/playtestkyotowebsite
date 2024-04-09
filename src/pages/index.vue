@@ -2,6 +2,8 @@
   <div class="main flexcolumn fullheight">
     <HomeIntro />
 
+    <HomePhotoLink />
+
     <div class="marbotbig">
       <HomeAbout />
     </div>
