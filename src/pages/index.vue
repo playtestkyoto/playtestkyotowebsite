@@ -4,6 +4,8 @@
 
     <HomePhotoLink />
 
+    <HomeVideo />
+
     <div class="marbotbig">
       <HomeAbout />
     </div>
