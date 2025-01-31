@@ -11,6 +11,17 @@
 import * as c from '~/assets/common'
 import * as appState from '~/assets/state'
 
+useHead({
+  script: [
+    {
+      src: 'https://umm.jasperstephenson.com/script.js',
+      defer: true,
+      'data-website-id':
+        'eb0e802c-a1c9-4d2e-adfb-7af615eb0af7',
+    },
+  ],
+})
+
 onMounted(async () => {
   updateWindowSizeVars()
   window.addEventListener('resize', updateWindowSizeVars)
