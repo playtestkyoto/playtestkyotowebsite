@@ -39,7 +39,7 @@ const venues = {
     name: "Bridge Studio",
     nameJa: "Bridge Studio",
     url: "https://brdg.to",
-    image: "/images/venues/bridgestudio.jpg",
+    image: "./images/venues/bridgestudio.jpg",
     mapUrl: "https://maps.app.goo.gl/HKAymLAYDWVGrjgX7",
     color: "var(--c1)"
   },
@@ -47,7 +47,7 @@ const venues = {
     name: "Various Kyoto Spots",
     nameJa: "京都市各所",
     color: "var(--c6)",
-    image: "/images/hero/4.jpg"
+    image: "./images/hero/4.jpg"
   }
 };
 const designers = {
@@ -55,61 +55,61 @@ const designers = {
   //   name: 'Mariko Sugita',
   //   bio:
   //     'Mariko Sugita is a director who works on design projects in multiple cities, including Shibuya, Ikebukuro, Kobe, Amsterdam, Nairobi, Cairo, and Ho Chi Minh City, with the theme of "editing urban experiences." She works across Japan and abroad, writing and editing in the fields of urban planning, architecture, and city planning, as well as curating and producing new programs in the fields of culture and art. She spends half of the year living in various cities abroad.',
-  //   image: '/images/people/mariko.jpg',
+  //   image: './images/people/mariko.jpg',
   // },
   // name: 'Jasper Stephenson',
   // bio:
   //   'Jasper is a creator based in Sakyoku, Kyoto. The most well-known of his recent games is the online collaborative gallery Different Strokes. Previously, he conducted game research and development with Cygames in Tokyo.',
-  // image: '/images/people/jasper.jpg',
+  // image: './images/people/jasper.jpg',
   // url: 'https://www.jasperstephenson.com/',
   zack: {
     name: "Zack Wood",
     bio: "Zack has held workshops and shown his work throughout events in Europe and is currently enrolled in a PhD program at Kyoto Seika University. He has been developing an original deck of oracle cards since mid-2020, which uses characters from his video game Monster Garden (available in English and Japanese). His readings build on his experiences with game design, game facilitation, and performance since 2014.",
-    image: "/images/people/zack.webp",
+    image: "./images/people/zack.webp",
     url: "http://wzackw.com/"
   },
   joanna: {
     name: "Joanna Lyu",
     bio: "Joanna is a creative technologist and multimedia artist with a background in game design. Her practice spans across interactive virtual environments/CGI, audiovisual live performances and installations. She is interested in making interactive works which invite the public to explore the connections between humans, public spaces, and profound societal questions.",
-    image: "/images/people/joanna.webp",
+    image: "./images/people/joanna.webp",
     url: "https://joannalyu.com/"
   },
   kaho: {
     name: "Kaho Abe",
     bio: "Kaho Abe is an award winning Media Artist and Game Designer from NYC, currently residing in Tokyo, Japan. She uses technology to create novel playful experiences for the physical world, with the hope of creating opportunities for people to connect with each other, face to face. Kaho builds custom game controllers and interfaces by embedding switches, sensors and other electrical components into objects and wearables. Her games have been shown at various museums, art galleries and festivals, including the Victoria and Albert Museum in London, the Museum of the Moving Image in New York City, the Game Developer's Conference in San Francisco, Come Out and Play Festival in NYC, and Make.Ctrl.Japan in Tokyo, to name a few.",
-    image: "/images/people/kaho.jpg",
+    image: "./images/people/kaho.jpg",
     url: "https://www.kahoabe.net/"
   },
   marcus: {
     name: "Marcus Richert",
     bio: "Marcus Richert is a designer and dictionary editor from Sweden, residing in Japan on and off since 2005.",
-    image: "/images/people/marcus.webp",
+    image: "./images/people/marcus.webp",
     url: "https://twitter.com/marcus_richert?lang=en"
   },
   tomo: {
     name: "Tomo Kihara",
     bio: "A media artist and a game designer that develops experimental games and installations that draw out unexplored questions from people through play.",
-    image: "/images/people/tomo.jpg",
+    image: "./images/people/tomo.jpg",
     url: "https://www.tomokihara.com/"
   },
   playtest: {
     name: "Playtest Team",
     bio: "",
-    image: "/images/people/playtest.jpg",
+    image: "./images/people/playtest.jpg",
     url: "https://playtest.city/"
   },
   farfama: {
     name: "Farfama",
-    image: "/images/people/farfama.webp"
+    image: "./images/people/farfama.webp"
   },
   space: {
     name: `501`,
-    image: "/images/people/501.webp"
+    image: "./images/people/501.webp"
   }
 };
 const games = [
   {
-    image: "/images/games/zack.webp",
+    image: "./images/games/zack.webp",
     name: "PLAY SESSION",
     description: "A series of simple games taken from improv theater and dance-movement practices for connection, creativity and fun! Afterwards, we will create small zines to reflect on the experience.",
     descriptionJa: "アーティスト・Zack Woodによる、即興演劇やダンス・ムーブメントの実践から学んだシンプルなゲーム。ゲーム終了後は、体験を振り返るために小冊子を作ります。",
@@ -118,7 +118,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/jam.jpg",
+    image: "./images/games/jam.jpg",
     name: "Physical Game Jam",
     description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest spatial games over the course of a day. All skill levels are welcome!`,
     /*
@@ -132,7 +132,7 @@ const games = [
     // ticketUrl: 'https://peatix.com/event/3849195/view',
   },
   {
-    image: "/images/games/joanna.webp",
+    image: "./images/games/joanna.webp",
     name: "Warp and Weft",
     description: `A collaborative and competitive game about connecting everything (literally) on the street in a way that is out of the ordinary. Within 60 seconds, each team has to create one closed shape with as many edges as possible, using any buildings, structures, objects, people, etc. around them.`,
     descriptionJa: "街角のあらゆるものを普通とは違う方法でつなげる、共同作業と競争ゲーム。各チームは60秒以内に、周囲の建物、構造物、物、人などのあらゆるものを使い、できるだけ多くの辺を持つ閉じた形を1つ作ります。",
@@ -141,7 +141,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/kaho.png",
+    image: "./images/games/kaho.png",
     name: "Touch",
     description: `A playful, interactive room that creates opportunities for people to hold hands, and touch each other to create changes in sounds.`,
     descriptionJa: "誰かと手をつないだり、触れ合ったりすることで音の変化を生み出す、遊び心のあるインタラクティブなインスタレーションを、常設展示会場にて展示します。",
@@ -150,7 +150,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/marcus.jpg",
+    image: "./images/games/marcus.jpg",
     name: "DIY Hanafuda Workshop",
     description: `Make your own Hanafuda cards with a stencilling technique called kappazuri! `,
     descriptionJa: "花札と言えば、今でこそ機械刷りのものが当たり前ですが、江戸時代から昭和初期にかけて京都では「合羽摺り」というステンシルを使った手摺りが一般的でした。戦後に姿を消したこの印刷方法は昭和50年代に一度復活されたものの、手摺りの花札を手に入れようと思えば、今日ではとても高価です。この手摺り花札を一緒に作り、みんなで遊んでみましょう。",
@@ -159,7 +159,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/tomo.png",
+    image: "./images/games/tomo.png",
     name: "Unmapping",
     description: `In this game, players are blindfolded and taken to a mystery location by car, their phones and wallets temporarily sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to the goal. As more people rely entirely on their smartphones for getting directions, we will explore our relationship with cities through the experience of literally getting lost.`,
     descriptionJa: "このゲームではプレイヤー達は目隠しをされ、謎の場所へ車で連れて行かれます。参加者の携帯電話と財布は一時的に封筒に封印されているため、自分の感覚だけを頼りに手がかりを解き明かして、ゴールへ辿り着かなければいけません。道案内をスマートフォンに頼り切る人たちが増えたいま、「迷う」ことを通して私たちと都市の関係を考えていきます。",
@@ -168,7 +168,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/farfama.webp",
+    image: "./images/games/farfama.webp",
     name: "Urban Lens",
     description: `Capture the textures, materials, and patterns of Kyoto — we'll notice the details of the city to create clothing patterns for characters.`,
     descriptionJa: "スマホを使って京都の質感、素材、模様を撮影する遊び。街のディテールをキャプチャする「Urban Lens」を使って、デジタルシティの登場人物たちの、服のパターンを作ってみよう。",
@@ -177,7 +177,7 @@ const games = [
     ticketUrl: "coming soon"
   },
   {
-    image: "/images/games/space.webp",
+    image: "./images/games/space.webp",
     name: "Space Ambassador",
     description: "A game in which you guide aliens through the Jodoji Temple in Kyoto, Japan. Teams will work together with officials from the Space Embassy to create a terrestrial picture from a code.",
     descriptionJa: `京都の浄土寺を、宇宙人に向けてガイドするゲーム。宇宙大使館の役人と共に、チームで暗号から地上絵を作ります。`,
@@ -678,7 +678,7 @@ const _sfc_main$2 = /* @__PURE__ */ vueExports.defineComponent({
         name: "Mariko Sugita",
         role: "Director",
         url: "https://linktr.ee/MarikoSugita",
-        image: "/images/people/mariko_trans.png",
+        image: "./images/people/mariko_trans.png",
         imageHeightMod: 1.2,
         z: 3
       },
@@ -686,31 +686,31 @@ const _sfc_main$2 = /* @__PURE__ */ vueExports.defineComponent({
         name: "Jasper Stephenson",
         role: "Generalist",
         url: "https://www.jasperstephenson.com/",
-        image: "/images/people/jasper_trans.png"
+        image: "./images/people/jasper_trans.png"
       },
       {
         name: "Zack Wood",
         role: "Planner",
         url: "http://wzackw.com/",
-        image: "/images/people/zack_trans.png",
+        image: "./images/people/zack_trans.png",
         imageHeightMod: 1.4
       },
       {
         name: "Chisato Tanaka",
         role: "Planner",
-        image: "/images/people/chisato_trans.png",
+        image: "./images/people/chisato_trans.png",
         imageHeightMod: 1,
         z: 3
       }
     ];
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(vueExports.mergeProps({ class: "team" }, _attrs))} data-v-0fdf59ab><h2 class="marbotsmall bold textcenter" data-v-0fdf59ab>`);
+      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(vueExports.mergeProps({ class: "team" }, _attrs))} data-v-e651fefd><h2 class="marbotsmall bold textcenter" data-v-e651fefd>`);
       if (vueExports.unref(locale) === "ja") {
-        _push(`<span data-v-0fdf59ab>Playtestのチーム</span>`);
+        _push(`<span data-v-e651fefd>Playtestのチーム</span>`);
       } else {
-        _push(`<span data-v-0fdf59ab>Playtest Team</span>`);
+        _push(`<span data-v-e651fefd>Playtest Team</span>`);
       }
-      _push(`</h2><div class="teamMembers" data-v-0fdf59ab><div class="mobileList nodesktop flexcenter flexcolumn" data-v-0fdf59ab><!--[-->`);
+      _push(`</h2><div class="teamMembers" data-v-e651fefd><div class="mobileList nodesktop flexcenter flexcolumn" data-v-e651fefd><!--[-->`);
       serverRenderer_cjs_prodExports.ssrRenderList(teamMembers, (member) => {
         serverRenderer_cjs_prodExports.ssrRenderVNode(_push, vueExports.createVNode(vueExports.resolveDynamicComponent(member.url ? "a" : "div"), {
           key: member.name,
@@ -742,9 +742,9 @@ const _sfc_main$2 = /* @__PURE__ */ vueExports.defineComponent({
         }, {
           default: vueExports.withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
-              _push2(`<div class="padleft padright nomobile" data-v-0fdf59ab${_scopeId}><h3 class="marnone" data-v-0fdf59ab${_scopeId}>${serverRenderer_cjs_prodExports.ssrInterpolate(member.name)}</h3></div><div class="memberImage" data-v-0fdf59ab${_scopeId}><img${serverRenderer_cjs_prodExports.ssrRenderAttr("src", member.image)} style="${serverRenderer_cjs_prodExports.ssrRenderStyle({
+              _push2(`<div class="padleft padright nomobile" data-v-e651fefd${_scopeId}><h3 class="marnone" data-v-e651fefd${_scopeId}>${serverRenderer_cjs_prodExports.ssrInterpolate(member.name)}</h3></div><div class="memberImage" data-v-e651fefd${_scopeId}><img${serverRenderer_cjs_prodExports.ssrRenderAttr("src", member.image)} style="${serverRenderer_cjs_prodExports.ssrRenderStyle({
                 height: member.imageHeightMod ? member.imageHeightMod * 100 + "%" : "100%"
-              })}" data-v-0fdf59ab${_scopeId}></div>`);
+              })}" data-v-e651fefd${_scopeId}></div>`);
             } else {
               return [
                 vueExports.createVNode("div", { class: "padleft padright nomobile" }, [
@@ -774,7 +774,7 @@ _sfc_main$2.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Home/Team.vue");
   return _sfc_setup$2 ? _sfc_setup$2(props, ctx) : void 0;
 };
-const __nuxt_component_7 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["__scopeId", "data-v-0fdf59ab"]]), { __name: "HomeTeam" });
+const __nuxt_component_7 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$2, [["__scopeId", "data-v-e651fefd"]]), { __name: "HomeTeam" });
 const _imports_0 = publicAssetsURL("/images/AAK.jpg");
 const _sfc_main$1 = /* @__PURE__ */ vueExports.defineComponent({
   __name: "Footer",
@@ -845,4 +845,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-080892ac"]]);
 
 export { index as default };
-//# sourceMappingURL=index-MDFr0blC.mjs.map
+//# sourceMappingURL=index-CoZR3sp4.mjs.map

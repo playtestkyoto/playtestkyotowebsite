@@ -3,7 +3,7 @@ export const venues: { [key: string]: Venue } = {
     name: 'Bridge Studio',
     nameJa: 'Bridge Studio',
     url: 'https://brdg.to',
-    image: '/images/venues/bridgestudio.jpg',
+    image: './images/venues/bridgestudio.jpg',
     mapUrl: 'https://maps.app.goo.gl/HKAymLAYDWVGrjgX7',
     color: 'var(--c1)',
   },
@@ -11,13 +11,13 @@ export const venues: { [key: string]: Venue } = {
     name: 'Various Kyoto Spots',
     nameJa: '京都市各所',
     color: 'var(--c6)',
-    image: '/images/hero/4.jpg',
+    image: './images/hero/4.jpg',
   },
   // kyotouniversityofart: {
   //   name: 'Kyoto Univ. of the Arts',
   //   nameJa: '京都市立芸術大学',
   //   url: 'https://www.kyoto-art.ac.jp/en/',
-  //   image: '/images/venues/kyotouniversityofart.jpg',
+  //   image: './images/venues/kyotouniversityofart.jpg',
   //   mapUrl: 'https://maps.app.goo.gl/z9LNHKRa1hVwRaG86',
   //   color: 'var(--c6)',
   // },
@@ -25,7 +25,7 @@ export const venues: { [key: string]: Venue } = {
     name: 'Kyoto City Hall',
     nameJa: '京都市役所',
     url: 'https://www.city.kyoto.lg.jp/',
-    image: '/images/venues/cityhall.jpg',
+    image: './images/venues/cityhall.jpg',
     mapUrl: 'https://maps.app.goo.gl/j7SiYnHtWerLwMDx6',
     color: 'var(--c3)',
   },
@@ -33,7 +33,7 @@ export const venues: { [key: string]: Venue } = {
     name: 'Hohohoza',
     nameJa: 'ホホホ座',
     url: 'http://hohohoza.com/',
-    image: '/images/venues/handsawpress.jpg',
+    image: './images/venues/handsawpress.jpg',
     mapUrl: 'https://maps.app.goo.gl/DJucGziifENMqoKV9',
     color: 'var(--c4)',
   },
@@ -41,7 +41,7 @@ export const venues: { [key: string]: Venue } = {
   //   name: 'Hand Saw Press',
   //   nameJa: 'Hand Saw Press',
   //   url: 'https://handsawpresstokyo.com/workshop.html',
-  //   image: '/images/venues/handsawpress.jpg',
+  //   image: './images/venues/handsawpress.jpg',
   //   mapUrl: 'https://maps.app.goo.gl/UdEG2wZhh5gbhLK67',
   //   color: 'var(--c4)',
   // },
@@ -49,7 +49,7 @@ export const venues: { [key: string]: Venue } = {
     name: 'Fumoto',
     nameJa: '麓',
     url: 'https://jodojiza.com/',
-    image: '/images/venues/fumoto.png',
+    image: './images/venues/fumoto.png',
     mapUrl: 'https://maps.app.goo.gl/Cz8kPQEUizcBqJG3A',
     color: 'var(--c5)',
   },
@@ -60,64 +60,64 @@ export const designers: { [key: string]: Designer } = {
   //   name: 'Mariko Sugita',
   //   bio:
   //     'Mariko Sugita is a director who works on design projects in multiple cities, including Shibuya, Ikebukuro, Kobe, Amsterdam, Nairobi, Cairo, and Ho Chi Minh City, with the theme of "editing urban experiences." She works across Japan and abroad, writing and editing in the fields of urban planning, architecture, and city planning, as well as curating and producing new programs in the fields of culture and art. She spends half of the year living in various cities abroad.',
-  //   image: '/images/people/mariko.jpg',
+  //   image: './images/people/mariko.jpg',
   // },
 
   // name: 'Jasper Stephenson',
   // bio:
   //   'Jasper is a creator based in Sakyoku, Kyoto. The most well-known of his recent games is the online collaborative gallery Different Strokes. Previously, he conducted game research and development with Cygames in Tokyo.',
-  // image: '/images/people/jasper.jpg',
+  // image: './images/people/jasper.jpg',
   // url: 'https://www.jasperstephenson.com/',
 
   zack: {
     name: 'Zack Wood',
     bio: 'Zack has held workshops and shown his work throughout events in Europe and is currently enrolled in a PhD program at Kyoto Seika University. He has been developing an original deck of oracle cards since mid-2020, which uses characters from his video game Monster Garden (available in English and Japanese). His readings build on his experiences with game design, game facilitation, and performance since 2014.',
-    image: '/images/people/zack.webp',
+    image: './images/people/zack.webp',
     url: 'http://wzackw.com/',
   },
   joanna: {
     name: 'Joanna Lyu',
     bio: 'Joanna is a creative technologist and multimedia artist with a background in game design. Her practice spans across interactive virtual environments/CGI, audiovisual live performances and installations. She is interested in making interactive works which invite the public to explore the connections between humans, public spaces, and profound societal questions.',
-    image: '/images/people/joanna.webp',
+    image: './images/people/joanna.webp',
     url: 'https://joannalyu.com/',
   },
   kaho: {
     name: 'Kaho Abe',
     bio: "Kaho Abe is an award winning Media Artist and Game Designer from NYC, currently residing in Tokyo, Japan. She uses technology to create novel playful experiences for the physical world, with the hope of creating opportunities for people to connect with each other, face to face. Kaho builds custom game controllers and interfaces by embedding switches, sensors and other electrical components into objects and wearables. Her games have been shown at various museums, art galleries and festivals, including the Victoria and Albert Museum in London, the Museum of the Moving Image in New York City, the Game Developer's Conference in San Francisco, Come Out and Play Festival in NYC, and Make.Ctrl.Japan in Tokyo, to name a few.",
-    image: '/images/people/kaho.jpg',
+    image: './images/people/kaho.jpg',
     url: 'https://www.kahoabe.net/',
   },
   marcus: {
     name: 'Marcus Richert',
     bio: 'Marcus Richert is a designer and dictionary editor from Sweden, residing in Japan on and off since 2005.',
-    image: '/images/people/marcus.webp',
+    image: './images/people/marcus.webp',
     url: 'https://twitter.com/marcus_richert?lang=en',
   },
   tomo: {
     name: 'Tomo Kihara',
     bio: 'A media artist and a game designer that develops experimental games and installations that draw out unexplored questions from people through play.',
-    image: '/images/people/tomo.jpg',
+    image: './images/people/tomo.jpg',
     url: 'https://www.tomokihara.com/',
   },
   playtest: {
     name: 'Playtest Team',
     bio: '',
-    image: '/images/people/playtest.jpg',
+    image: './images/people/playtest.jpg',
     url: 'https://playtest.city/',
   },
   farfama: {
     name: 'Farfama',
-    image: '/images/people/farfama.webp',
+    image: './images/people/farfama.webp',
   },
   space: {
     name: `501`,
-    image: '/images/people/501.webp',
+    image: './images/people/501.webp',
   },
 }
 
 export const games: Game[] = [
   {
-    image: '/images/games/zack.webp',
+    image: './images/games/zack.webp',
     name: 'PLAY SESSION',
     description:
       'A series of simple games taken from improv theater and dance-movement practices for connection, creativity and fun! Afterwards, we will create small zines to reflect on the experience.',
@@ -128,7 +128,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/jam.jpg',
+    image: './images/games/jam.jpg',
     name: 'Physical Game Jam',
     description: `Let's design physical games! A guided workshop to ideate, prototype, and playtest spatial games over the course of a day. All skill levels are welcome!`,
     /*
@@ -143,7 +143,7 @@ export const games: Game[] = [
     // ticketUrl: 'https://peatix.com/event/3849195/view',
   },
   {
-    image: '/images/games/joanna.webp',
+    image: './images/games/joanna.webp',
     name: 'Warp and Weft',
     description: `A collaborative and competitive game about connecting everything (literally) on the street in a way that is out of the ordinary. Within 60 seconds, each team has to create one closed shape with as many edges as possible, using any buildings, structures, objects, people, etc. around them.`,
     descriptionJa:
@@ -153,7 +153,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/kaho.png',
+    image: './images/games/kaho.png',
     name: 'Touch',
     description: `A playful, interactive room that creates opportunities for people to hold hands, and touch each other to create changes in sounds.`,
     descriptionJa:
@@ -163,7 +163,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/marcus.jpg',
+    image: './images/games/marcus.jpg',
     name: 'DIY Hanafuda Workshop',
     description: `Make your own Hanafuda cards with a stencilling technique called kappazuri! `,
     descriptionJa:
@@ -173,7 +173,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/tomo.png',
+    image: './images/games/tomo.png',
     name: 'Unmapping',
     description: `In this game, players are blindfolded and taken to a mystery location by car, their phones and wallets temporarily sealed away in an envelope. Relying only on their senses, they must unravel clues to find their way to the goal. As more people rely entirely on their smartphones for getting directions, we will explore our relationship with cities through the experience of literally getting lost.`,
     descriptionJa:
@@ -183,7 +183,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/farfama.webp',
+    image: './images/games/farfama.webp',
     name: 'Urban Lens',
     description: `Capture the textures, materials, and patterns of Kyoto — we'll notice the details of the city to create clothing patterns for characters.`,
     descriptionJa:
@@ -193,7 +193,7 @@ export const games: Game[] = [
     ticketUrl: 'coming soon',
   },
   {
-    image: '/images/games/space.webp',
+    image: './images/games/space.webp',
     name: 'Space Ambassador',
     description:
       'A game in which you guide aliens through the Jodoji Temple in Kyoto, Japan. Teams will work together with officials from the Space Embassy to create a terrestrial picture from a code.',

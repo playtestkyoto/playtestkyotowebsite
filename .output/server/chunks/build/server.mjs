@@ -38108,12 +38108,12 @@ const _routes = [
   {
     name: "index___en",
     path: "/en",
-    component: () => import('./index-MDFr0blC.mjs')
+    component: () => import('./index-CoZR3sp4.mjs')
   },
   {
     name: "index___ja",
     path: "/",
-    component: () => import('./index-MDFr0blC.mjs')
+    component: () => import('./index-CoZR3sp4.mjs')
   }
 ];
 var shared_cjs_prodExports = /* @__PURE__ */ requireShared_cjs_prod();
