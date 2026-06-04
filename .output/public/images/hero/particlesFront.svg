@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 660.29 130.63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#gra-1);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#gra-1-2);
+      }
+    </style>
+    <linearGradient id="gra-1" x1="29.75" y1="130.63" x2="29.75" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".1" stop-color="#fff" stop-opacity=".04"/>
+      <stop offset=".26" stop-color="#fff" stop-opacity=".13"/>
+      <stop offset=".47" stop-color="#fff" stop-opacity=".29"/>
+      <stop offset=".71" stop-color="#fff" stop-opacity=".5"/>
+      <stop offset=".98" stop-color="#fff" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".8"/>
+    </linearGradient>
+    <linearGradient id="gra-1-2" data-name="gra-1" x1="648.64" y1="103.42" x2="648.64" y2="27.89" xlink:href="#gra-1"/>
+  </defs>
+  <g id="particle_close">
+    <polygon class="cls-1" points="0 41.65 59.51 130.63 9.67 0 0 41.65"/>
+    <polygon class="cls-2" points="636.98 103.42 660.29 75.34 650.41 27.89 636.98 103.42"/>
+  </g>
+</svg>
