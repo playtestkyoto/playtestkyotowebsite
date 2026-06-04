@@ -13,7 +13,7 @@
       }"
     >
       <div class="heroLogo flexcenter">
-        <img src="/images/logos/playtest-2024.svg" />
+        <img src="./images/logos/playtest-2024.svg" />
       </div>
 
       <div class="marqueeBox flexcolumn flexcenter marbot">
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <img class="dates" src="/images/home/dates.png" />
+      <img class="dates" src="./images/home/dates.png" />
 
       <div class="martopbig">
         <a

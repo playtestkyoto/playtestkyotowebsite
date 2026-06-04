@@ -10,7 +10,7 @@
         <div
           class="image"
           :style="{
-            backgroundImage: `url('/images/hero/${imageIndex}.jpg')`,
+            backgroundImage: `url('./images/hero/${imageIndex}.jpg')`,
           }"
         ></div>
       </div>

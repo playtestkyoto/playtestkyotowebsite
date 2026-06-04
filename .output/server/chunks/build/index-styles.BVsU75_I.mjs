@@ -1,5 +1,5 @@
 import { M as Marquee_vue_vue_type_style_index_0_scoped_7d836d2e_lang } from './index-styles-1.mjs-Bjae3jDV.mjs';
-import { I as Intro_vue_vue_type_style_index_0_scoped_fe377d21_lang } from './index-styles-2.mjs-DkOo2KE4.mjs';
+import { I as Intro_vue_vue_type_style_index_0_scoped_a7fcfcd3_lang } from './index-styles-2.mjs-Gvam3L1-.mjs';
 import { P as PhotoLink_vue_vue_type_style_index_0_scoped_45287938_lang } from './index-styles-3.mjs-DwRwWyCE.mjs';
 import { V as Video_vue_vue_type_style_index_0_scoped_6fccc4d9_lang } from './index-styles-4.mjs-BA8jtXFV.mjs';
 import { A as About_vue_vue_type_style_index_0_scoped_8941d2e7_lang } from './index-styles-5.mjs-CHzBgARN.mjs';
@@ -27,9 +27,9 @@ import 'vue';
 
 const index_vue_vue_type_style_index_0_scoped_080892ac_lang = ".main[data-v-080892ac]{min-height:100vh;margin:0 auto}.homeBg1[data-v-080892ac]{background:var(--text);color:var(--bg)}.homeBg2[data-v-080892ac]{color:var(--text);animation:rainbow 5s infinite alternate}.homeBg3[data-v-080892ac]{position:relative;background:var(--bg);color:var(--text)}";
 
-const indexStyles_XqIGj_F = [
+const indexStyles_BVsU75_I = [
   Marquee_vue_vue_type_style_index_0_scoped_7d836d2e_lang,
-  Intro_vue_vue_type_style_index_0_scoped_fe377d21_lang,
+  Intro_vue_vue_type_style_index_0_scoped_a7fcfcd3_lang,
   PhotoLink_vue_vue_type_style_index_0_scoped_45287938_lang,
   Video_vue_vue_type_style_index_0_scoped_6fccc4d9_lang,
   About_vue_vue_type_style_index_0_scoped_8941d2e7_lang,
@@ -41,5 +41,5 @@ const indexStyles_XqIGj_F = [
   index_vue_vue_type_style_index_0_scoped_080892ac_lang
 ];
 
-export { indexStyles_XqIGj_F as default };
-//# sourceMappingURL=index-styles.-XqIGj_F.mjs.map
+export { indexStyles_BVsU75_I as default };
+//# sourceMappingURL=index-styles.BVsU75_I.mjs.map
