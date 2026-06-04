@@ -7,7 +7,7 @@ import { I as InfoGrid_vue_vue_type_style_index_0_scoped_1ae88fd4_lang } from '.
 import { G as Games_vue_vue_type_style_index_0_scoped_c19c6f6c_lang } from './index-styles-7.mjs-BbJAUFd5.mjs';
 import { C as CalendarFromText_vue_vue_type_style_index_0_scoped_76e219ae_lang } from './index-styles-8.mjs-BbTAzhVF.mjs';
 import { T as Team_vue_vue_type_style_index_0_scoped_0fdf59ab_lang } from './index-styles-9.mjs-4Xsb-q4E.mjs';
-import { F as Footer_vue_vue_type_style_index_0_scoped_d0885420_lang } from './index-styles-10.mjs-DkwYa8XL.mjs';
+import { F as Footer_vue_vue_type_style_index_0_scoped_d011bfc3_lang } from './index-styles-10.mjs-nt6lT3YV.mjs';
 import '../routes/renderer.mjs';
 import 'vue-bundle-renderer/runtime';
 import '../nitro/nitro.mjs';
@@ -27,7 +27,7 @@ import 'vue';
 
 const index_vue_vue_type_style_index_0_scoped_080892ac_lang = ".main[data-v-080892ac]{min-height:100vh;margin:0 auto}.homeBg1[data-v-080892ac]{background:var(--text);color:var(--bg)}.homeBg2[data-v-080892ac]{color:var(--text);animation:rainbow 5s infinite alternate}.homeBg3[data-v-080892ac]{position:relative;background:var(--bg);color:var(--text)}";
 
-const indexStyles_BWduWF9h = [
+const indexStyles_C1eXZgon = [
   Marquee_vue_vue_type_style_index_0_scoped_7d836d2e_lang,
   Intro_vue_vue_type_style_index_0_scoped_fe377d21_lang,
   PhotoLink_vue_vue_type_style_index_0_scoped_45287938_lang,
@@ -37,9 +37,9 @@ const indexStyles_BWduWF9h = [
   Games_vue_vue_type_style_index_0_scoped_c19c6f6c_lang,
   CalendarFromText_vue_vue_type_style_index_0_scoped_76e219ae_lang,
   Team_vue_vue_type_style_index_0_scoped_0fdf59ab_lang,
-  Footer_vue_vue_type_style_index_0_scoped_d0885420_lang,
+  Footer_vue_vue_type_style_index_0_scoped_d011bfc3_lang,
   index_vue_vue_type_style_index_0_scoped_080892ac_lang
 ];
 
-export { indexStyles_BWduWF9h as default };
-//# sourceMappingURL=index-styles.BWduWF9h.mjs.map
+export { indexStyles_C1eXZgon as default };
+//# sourceMappingURL=index-styles.C1eXZgon.mjs.map

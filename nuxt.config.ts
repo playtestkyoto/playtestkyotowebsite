@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   // },
   css: ['~/assets/css/main.scss'],
   app: {
+    baseURL: '/playtest/',
     head: {
       title: 'Playtest Kyoto 2024',
       meta: [

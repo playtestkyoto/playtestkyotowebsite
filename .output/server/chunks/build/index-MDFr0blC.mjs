@@ -783,11 +783,11 @@ const _sfc_main$1 = /* @__PURE__ */ vueExports.defineComponent({
     const i18n = useI18n();
     const locale = vueExports.computed(() => i18n.locale.value);
     return (_ctx, _push, _parent, _attrs) => {
-      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(vueExports.mergeProps({ class: "footer" }, _attrs))} data-v-d0885420>`);
+      _push(`<div${serverRenderer_cjs_prodExports.ssrRenderAttrs(vueExports.mergeProps({ class: "footer" }, _attrs))} data-v-d011bfc3>`);
       if (vueExports.unref(locale) === "ja") {
-        _push(`<div data-v-d0885420><div class="grid2 gap" data-v-d0885420><div class="bold" data-v-d0885420>主催</div><div data-v-d0885420> Playtest Kyoto 実行委員会（代表: 杉田真理子） </div><div class="bold" data-v-d0885420>デザイン</div><div data-v-d0885420>綱島卓也, Jasper Stephenson</div><div class="bold" data-v-d0885420>助成</div><div class="flexverticalcenter" data-v-d0885420><img${serverRenderer_cjs_prodExports.ssrRenderAttr("src", _imports_0)} style="${serverRenderer_cjs_prodExports.ssrRenderStyle({ "height": "4em", "margin-left": "-1em" })}" data-v-d0885420> Arts Aid Kyoto </div><div class="bold" data-v-d0885420>お問合せ</div><div data-v-d0885420>playtestkyoto@gmail.com</div></div></div>`);
+        _push(`<div data-v-d011bfc3><div class="grid2 gap" data-v-d011bfc3><div class="bold" data-v-d011bfc3>主催</div><div data-v-d011bfc3> Playtest Kyoto 実行委員会（代表: 杉田真理子） </div><div class="bold" data-v-d011bfc3>デザイン</div><div data-v-d011bfc3>綱島卓也, Jasper Stephenson</div><div class="bold" data-v-d011bfc3>助成</div><div class="flexverticalcenter" data-v-d011bfc3><img${serverRenderer_cjs_prodExports.ssrRenderAttr("src", _imports_0)} style="${serverRenderer_cjs_prodExports.ssrRenderStyle({ "height": "4em", "margin-left": "-1em" })}" data-v-d011bfc3> Arts Aid Kyoto </div><div class="bold" data-v-d011bfc3>お問合せ</div><div data-v-d011bfc3>playtestkyoto@gmail.com</div></div></div>`);
       } else {
-        _push(`<div data-v-d0885420><div class="grid2 gap" data-v-d0885420><div class="bold" data-v-d0885420>Organizer</div><div data-v-d0885420> Playtest Kyoto Executive Committee (Representative: Mariko Sugita) </div><div class="bold" data-v-d0885420>Design</div><div data-v-d0885420>Takuya Tsunashima, Jasper Stephenson</div><div class="bold" data-v-d0885420>Inquiry</div><div data-v-d0885420><a href="mailto:playtestkyoto@gmail.com" data-v-d0885420>playtestkyoto@gmail.com</a></div></div></div>`);
+        _push(`<div data-v-d011bfc3><div class="grid2 gap" data-v-d011bfc3><div class="bold" data-v-d011bfc3>Organizer</div><div data-v-d011bfc3> Playtest Kyoto Executive Committee (Representative: Mariko Sugita) </div><div class="bold" data-v-d011bfc3>Design</div><div data-v-d011bfc3>Takuya Tsunashima, Jasper Stephenson</div><div class="bold" data-v-d011bfc3>Supported by</div><div class="flexverticalcenter" data-v-d011bfc3><img${serverRenderer_cjs_prodExports.ssrRenderAttr("src", _imports_0)} style="${serverRenderer_cjs_prodExports.ssrRenderStyle({ "height": "4em", "margin-left": "-1em" })}" data-v-d011bfc3> Arts Aid Kyoto </div><div class="bold" data-v-d011bfc3>Inquiry</div><div data-v-d011bfc3><a href="mailto:playtestkyoto@gmail.com" data-v-d011bfc3>playtestkyoto@gmail.com</a></div></div></div>`);
       }
       _push(`</div>`);
     };
@@ -799,7 +799,7 @@ _sfc_main$1.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/Home/Footer.vue");
   return _sfc_setup$1 ? _sfc_setup$1(props, ctx) : void 0;
 };
-const __nuxt_component_8 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-d0885420"]]), { __name: "HomeFooter" });
+const __nuxt_component_8 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$1, [["__scopeId", "data-v-d011bfc3"]]), { __name: "HomeFooter" });
 const _sfc_main = /* @__PURE__ */ vueExports.defineComponent({
   __name: "index",
   __ssrInlineRender: true,
@@ -845,4 +845,4 @@ _sfc_main.setup = (props, ctx) => {
 const index = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-080892ac"]]);
 
 export { index as default };
-//# sourceMappingURL=index-BCHEpCW3.mjs.map
+//# sourceMappingURL=index-MDFr0blC.mjs.map
